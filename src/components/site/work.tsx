@@ -11,7 +11,7 @@ const cases = [
     tag: "SEO & content",
     year: "2025",
     image: industrial,
-    alt: "Modern automotive workshop with technicians at work",
+    alt: "Technician servicing a car engine in a modern automotive workshop",
     story:
       "Strong brand demand, weak organic coverage. We fixed the technical foundation, built model-level content and linked it the way buyers actually search.",
     metrics: [
@@ -24,7 +24,7 @@ const cases = [
     tag: "PPC & paid social",
     year: "2025",
     image: ads,
-    alt: "Phone showing a paid social campaign for a restaurant brand",
+    alt: "Guest enjoying a dish at a restaurant table",
     story:
       "Broad delivery keywords were burning budget. We rebuilt the account around high-intent local searches and wrote ad copy per outlet.",
     metrics: [
@@ -37,7 +37,7 @@ const cases = [
     tag: "Web design & local SEO",
     year: "2024",
     image: brand,
-    alt: "Designer working on a venue brand layout beside colour swatches",
+    alt: "Graphic designer's desk with design app icons and a creative playbook",
     story:
       "A venue nobody could find online. Search-led content, local SEO and a cleaner enquiry journey turned browsing into booked site visits.",
     metrics: [
