@@ -5,7 +5,7 @@ export const ORG = {
   legalName: "Race Digital",
   phone: "+91-6353663006",
   email: "info@racedigital.in",
-  street: "B-812/A, World Trade Tower, Makarba",
+  street: "B-810, WTT Tower, Makarba",
   city: "Ahmedabad",
   region: "Gujarat",
   postalCode: "380051",

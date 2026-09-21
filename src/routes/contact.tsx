@@ -43,7 +43,7 @@ const details = [
   },
   {
     label: "Studio",
-    value: "B-812/A, WTT Tower, Makarba",
+    value: "B-810, WTT Tower, Makarba",
     href: "https://maps.google.com/?q=WTT+Tower+Makarba+Ahmedabad",
     note: "Ahmedabad, Gujarat 380051",
   },

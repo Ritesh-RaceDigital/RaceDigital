@@ -6,7 +6,7 @@ import { Reveal } from "./reveal";
 const interests = ["SEO", "PPC advertising", "Paid social ads", "Content marketing", "Web design", "Not sure yet"];
 
 const lines = [
-  { k: "Office", v: "B-812/A, WTT Tower, Makarba, Ahmedabad, Gujarat 380051" },
+  { k: "Office", v: "B-810, WTT Tower, Makarba, Ahmedabad, Gujarat 380051" },
   { k: "Write", v: "info@racedigital.in", href: "mailto:info@racedigital.in" },
   { k: "Call", v: "+91 635 366 3006", href: "tel:+916353663006" },
   { k: "Hours", v: "Mon–Sat, 10am to 7pm IST" },
