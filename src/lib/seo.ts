@@ -3,7 +3,7 @@ export const SITE_URL = "https://human-crafted-design.lovable.app";
 export const ORG = {
   name: "Race Digital",
   legalName: "Race Digital",
-  phone: "+91-7600443625",
+  phone: "+91-6353663006",
   email: "info@racedigital.in",
   street: "B-812/A, World Trade Tower, Makarba",
   city: "Ahmedabad",

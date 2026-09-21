@@ -43,8 +43,8 @@ export function PageHero({
                   <ChevronRight className="size-4" strokeWidth={2.4} />
                 </span>
               </Link>
-              <a href="tel:+917600443625" className="pill group border-transparent bg-secondary">
-                Call +91 760 044 3625
+              <a href="tel:+916353663006" className="pill group border-transparent bg-secondary">
+                Call +91 635 366 3006
                 <span className="pill-chip bg-foreground text-background group-hover:translate-x-0.5">
                   <ChevronRight className="size-4" strokeWidth={2.4} />
                 </span>

@@ -8,7 +8,7 @@ import { Reveal } from "@/components/site/reveal";
 
 const title = "Contact Race Digital — Digital Marketing Agency in Ahmedabad";
 const description =
-  "Talk to Race Digital about SEO, PPC, paid social, content and web design. Call +91 760 044 3625, email info@racedigital.in, or visit us in Makarba, Ahmedabad.";
+  "Talk to Race Digital about SEO, PPC, paid social, content and web design. Call +91 635 366 3006, email info@racedigital.in, or visit us in Makarba, Ahmedabad.";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -31,8 +31,8 @@ export const Route = createFileRoute("/contact")({
 const details = [
   {
     label: "Call",
-    value: "+91 760 044 3625",
-    href: "tel:+917600443625",
+    value: "+91 635 366 3006",
+    href: "tel:+916353663006",
     note: "Mon–Sat, 10am to 7pm IST",
   },
   {

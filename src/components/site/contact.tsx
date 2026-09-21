@@ -8,7 +8,7 @@ const interests = ["SEO", "PPC advertising", "Paid social ads", "Content marketi
 const lines = [
   { k: "Office", v: "B-812/A, WTT Tower, Makarba, Ahmedabad, Gujarat 380051" },
   { k: "Write", v: "info@racedigital.in", href: "mailto:info@racedigital.in" },
-  { k: "Call", v: "+91 760 044 3625", href: "tel:+917600443625" },
+  { k: "Call", v: "+91 635 366 3006", href: "tel:+916353663006" },
   { k: "Hours", v: "Mon–Sat, 10am to 7pm IST" },
 ];
 
@@ -92,7 +92,7 @@ export function Contact() {
 
             <Reveal delay={110} className="mt-10 flex flex-wrap items-center gap-6">
               <a
-                href="https://wa.me/917600443625"
+                href="https://wa.me/916353663006"
                 target="_blank"
                 rel="noreferrer"
                 className="pill group bg-card"

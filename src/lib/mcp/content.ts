@@ -79,8 +79,8 @@ export const tools = [
 export const contact = {
   studio: "B-812/A, WTT Tower, Makarba, Ahmedabad, Gujarat 380051",
   email: "info@racedigital.in",
-  phone: "+91 760 044 3625",
-  whatsapp: "https://wa.me/917600443625",
+  phone: "+91 635 366 3006",
+  whatsapp: "https://wa.me/916353663006",
   hours: "Mon–Sat, 10am to 7pm IST",
   responseTime: "Within one working day",
   social: ["Instagram", "Facebook", "LinkedIn", "YouTube"],
