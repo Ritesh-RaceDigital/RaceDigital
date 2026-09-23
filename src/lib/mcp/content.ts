@@ -83,5 +83,5 @@ export const contact = {
   whatsapp: "https://wa.me/916353663006",
   hours: "Mon–Sat, 10am to 7pm IST",
   responseTime: "Within one working day",
-  social: ["Instagram", "Facebook", "LinkedIn", "YouTube"],
+  social: ["Instagram", "Facebook", "LinkedIn"],
 } as const;
