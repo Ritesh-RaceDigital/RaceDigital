@@ -1,4 +1,4 @@
-import { LogoMark } from "./logo";
+import { Logo } from "./logo";
 
 const columns = [
   {
@@ -47,10 +47,7 @@ export function SiteFooter() {
       <div className="mx-auto max-w-[1440px] px-5 py-16 md:px-8">
         <div className="grid gap-12 lg:grid-cols-[1.3fr_2fr]">
           <div>
-            <p className="flex items-center gap-2.5 font-display text-lg font-extrabold tracking-tight">
-              <LogoMark className="size-8 shrink-0" />
-              Race<span className="text-g-blue">Digital</span>
-            </p>
+            <Logo className="h-9" />
             <p className="mt-5 max-w-xs text-sm leading-relaxed text-muted-foreground">
               A digital marketing agency in Makarba, Ahmedabad — SEO, PPC, paid social, content
               and web design built to deliver measurable ROI.
