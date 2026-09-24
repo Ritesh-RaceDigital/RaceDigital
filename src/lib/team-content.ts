@@ -1,7 +1,7 @@
 import rahul from "@/assets/team-rahul.webp";
 import kishan from "@/assets/team-kishan.webp";
 import salina from "@/assets/team-salina.webp";
-import karan from "@/assets/team-karan.webp";
+import nafe from "@/assets/team-nafe.webp";
 import neha from "@/assets/team-neha.webp";
 import jay from "@/assets/team-jay.webp";
 import ritika from "@/assets/team-ritika.webp";
@@ -44,12 +44,12 @@ export const team: TeamMember[] = [
     photo: salina,
   },
   {
-    name: "Karan Desai",
-    role: "Content Lead",
-    focus: "Editorial, digital PR",
-    note: "Ex-journalist. Refuses to publish anything he wouldn't read himself.",
-    initials: "KD",
-    photo: karan,
+    name: "Nafe Kapadiya",
+    role: "SEO Executive",
+    focus: "SEO, on-page",
+    note: "Handles the day-to-day of search — on-page updates, keyword tracking and the fixes that come out of every audit.",
+    initials: "NK",
+    photo: nafe,
   },
   {
     name: "Neha Trivedi",

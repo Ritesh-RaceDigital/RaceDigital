@@ -15,7 +15,7 @@ import { Counter } from "./counter";
 
 import teamRahul from "@/assets/team-rahul.webp";
 import teamNeha from "@/assets/team-neha.webp";
-import teamKaran from "@/assets/team-karan.webp";
+import teamNafe from "@/assets/team-nafe.webp";
 import teamSalina from "@/assets/team-salina.webp";
 
 const stats = [
@@ -28,7 +28,7 @@ const stats = [
 const proofFaces = [
   { src: teamRahul, alt: "Ritesh, Founder at Race Digital" },
   { src: teamNeha, alt: "Neha, UI/UX designer at Race Digital" },
-  { src: teamKaran, alt: "Karan, content lead at Race Digital" },
+  { src: teamNafe, alt: "Nafe, SEO executive at Race Digital" },
   { src: teamSalina, alt: "Salina, UI/UX designer at Race Digital" },
 ];
 
