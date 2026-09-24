@@ -26,10 +26,10 @@ const stats = [
 ];
 
 const proofFaces = [
-  { src: teamRahul, alt: "Rahul, SEO lead at Race Digital" },
-  { src: teamNeha, alt: "Neha, paid media strategist at Race Digital" },
-  { src: teamKaran, alt: "Karan, content strategist at Race Digital" },
-  { src: teamSneha, alt: "Sneha, account manager at Race Digital" },
+  { src: teamRahul, alt: "Ritesh, Founder at Race Digital" },
+  { src: teamNeha, alt: "Neha, UI/UX designer at Race Digital" },
+  { src: teamKaran, alt: "Karan, content lead at Race Digital" },
+  { src: teamSneha, alt: "Sneha, social media strategist at Race Digital" },
 ];
 
 function Letters({ text, className = "" }: { text: string; className?: string }) {

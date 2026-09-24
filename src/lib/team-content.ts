@@ -17,11 +17,11 @@ export interface TeamMember {
 
 export const leadership: TeamMember[] = [
   {
-    name: "Rahul Mehta",
+    name: "Ritesh Priyankar",
     role: "Founder & Growth Lead",
     focus: "Strategy, paid media",
     note: "Started Race Digital after a decade of running acquisition for retail brands. Still writes the first draft of every growth plan.",
-    initials: "RM",
+    initials: "RP",
     photo: rahul,
   },
 ];
