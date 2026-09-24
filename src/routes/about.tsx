@@ -9,7 +9,7 @@ import { Counter } from "@/components/site/counter";
 import { Ticker } from "@/components/site/ticker";
 import { Awards } from "@/components/site/awards";
 import { Voices } from "@/components/site/voices";
-import studio from "@/assets/studio.jpg";
+import studio from "@/assets/studio.webp";
 
 const title = "About Race Digital — Data-Driven Marketing Agency, Ahmedabad";
 const description =

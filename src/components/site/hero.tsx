@@ -13,10 +13,10 @@ import {
 import { Reveal } from "./reveal";
 import { Counter } from "./counter";
 
-import teamRahul from "@/assets/team-rahul.jpg";
-import teamNeha from "@/assets/team-neha.jpg";
-import teamKaran from "@/assets/team-karan.jpg";
-import teamSneha from "@/assets/team-sneha.jpg";
+import teamRahul from "@/assets/team-rahul.webp";
+import teamNeha from "@/assets/team-neha.webp";
+import teamKaran from "@/assets/team-karan.webp";
+import teamSneha from "@/assets/team-sneha.webp";
 
 const stats = [
   { to: 50, suffix: "+", label: "Satisfied clients" },

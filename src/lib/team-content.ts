@@ -1,11 +1,11 @@
-import rahul from "@/assets/team-rahul.jpg";
-import priya from "@/assets/team-priya.jpg";
-import aditya from "@/assets/team-aditya.jpg";
-import sneha from "@/assets/team-sneha.jpg";
-import karan from "@/assets/team-karan.jpg";
-import neha from "@/assets/team-neha.jpg";
-import jay from "@/assets/team-jay.jpg";
-import ritika from "@/assets/team-ritika.jpg";
+import rahul from "@/assets/team-rahul.webp";
+import priya from "@/assets/team-priya.webp";
+import aditya from "@/assets/team-aditya.webp";
+import sneha from "@/assets/team-sneha.webp";
+import karan from "@/assets/team-karan.webp";
+import neha from "@/assets/team-neha.webp";
+import jay from "@/assets/team-jay.webp";
+import ritika from "@/assets/team-ritika.webp";
 
 export interface TeamMember {
   name: string;

@@ -1,8 +1,8 @@
 import { ChevronRight } from "lucide-react";
 
-import industrial from "@/assets/work-industrial.jpg";
-import ads from "@/assets/work-ads.jpg";
-import brand from "@/assets/work-brand.jpg";
+import industrial from "@/assets/work-industrial.webp";
+import ads from "@/assets/work-ads.webp";
+import brand from "@/assets/work-brand.webp";
 import { Reveal } from "./reveal";
 
 const cases = [
