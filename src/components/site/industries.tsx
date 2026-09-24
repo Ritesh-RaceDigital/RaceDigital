@@ -1,18 +1,10 @@
+import { Link } from "@tanstack/react-router";
+
 import { Reveal } from "./reveal";
+import { industries as allIndustries, type Industry } from "@/lib/industries-content";
 
-const industries = [
-  { name: "Restaurants", note: "Multi-outlet F&B" },
-  { name: "Automotive", note: "Dealers & service" },
-  { name: "Hospitality", note: "Venues & events" },
-  { name: "E-commerce", note: "D2C & marketplace" },
-];
-
-const industriesRow2 = [
-  { name: "Healthcare", note: "Clinics & diagnostics" },
-  { name: "Real estate", note: "Developers & brokers" },
-  { name: "Education", note: "Coaching & institutes" },
-  { name: "Startups", note: "Pre-seed to Series A" },
-];
+const industries = allIndustries.slice(0, 4);
+const industriesRow2 = allIndustries.slice(4, 8);
 
 const tools = [
   "Google Ads",
@@ -29,26 +21,25 @@ const tools = [
   "Canva",
 ];
 
-function IndustryRow({
-  items,
-  reverse = false,
-}: {
-  items: { name: string; note: string }[];
-  reverse?: boolean;
-}) {
+function IndustryRow({ items, reverse = false }: { items: Industry[]; reverse?: boolean }) {
   return (
     <div className="marquee-row relative overflow-hidden [mask-image:linear-gradient(90deg,transparent,#000_6%,#000_94%,transparent)]">
       <div className={`${reverse ? "marquee-track-reverse" : "marquee-track"} gap-4 sm:gap-6`}>
         {[0, 1].map((dup) => (
           <div key={dup} className="flex shrink-0 items-baseline gap-4 pr-4 sm:gap-6 sm:pr-6">
             {items.map((it) => (
-              <span key={it.name + dup} className="group/item flex shrink-0 items-baseline gap-3">
+              <Link
+                key={it.name + dup}
+                to={it.caseStudySlug ? "/case-studies/$slug" : "/industries"}
+                params={it.caseStudySlug ? { slug: it.caseStudySlug } : undefined}
+                className="group/item flex shrink-0 items-baseline gap-3"
+              >
                 <span className="font-display text-[1.75rem] font-extrabold tracking-tight transition-colors duration-300 group-hover/item:text-g-blue sm:text-[2.4rem]">
                   {it.name}
                 </span>
                 <span className="hidden text-xs text-muted-foreground sm:inline">{it.note}</span>
                 <span className="font-display text-2xl font-light text-border sm:text-3xl">/</span>
-              </span>
+              </Link>
             ))}
           </div>
         ))}

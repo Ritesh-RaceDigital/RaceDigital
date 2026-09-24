@@ -7,6 +7,7 @@ import { services } from "@/lib/services-content";
 const pageLinks = [
   { label: "About", to: "/about" as const },
   { label: "Services", to: "/services" as const },
+  { label: "Industries", to: "/industries" as const },
   { label: "Team", to: "/team" as const },
   { label: "Case studies", to: "/case-studies" as const },
   { label: "Blog", to: "/blog" as const },
@@ -76,6 +77,13 @@ export function SiteNav() {
               </ul>
             </div>
           </div>
+
+          <Link
+            to="/industries"
+            className="link-draw text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+          >
+            Industries
+          </Link>
 
           <Link
             to="/team"
