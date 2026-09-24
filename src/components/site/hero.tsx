@@ -16,7 +16,7 @@ import { Counter } from "./counter";
 import teamRahul from "@/assets/team-rahul.webp";
 import teamNeha from "@/assets/team-neha.webp";
 import teamKaran from "@/assets/team-karan.webp";
-import teamSneha from "@/assets/team-sneha.webp";
+import teamSalina from "@/assets/team-salina.webp";
 
 const stats = [
   { to: 50, suffix: "+", label: "Satisfied clients" },
@@ -29,7 +29,7 @@ const proofFaces = [
   { src: teamRahul, alt: "Ritesh, Founder at Race Digital" },
   { src: teamNeha, alt: "Neha, UI/UX designer at Race Digital" },
   { src: teamKaran, alt: "Karan, content lead at Race Digital" },
-  { src: teamSneha, alt: "Sneha, social media strategist at Race Digital" },
+  { src: teamSalina, alt: "Salina, UI/UX designer at Race Digital" },
 ];
 
 function Letters({ text, className = "" }: { text: string; className?: string }) {

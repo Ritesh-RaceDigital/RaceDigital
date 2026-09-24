@@ -176,7 +176,7 @@ export const posts: BlogPost[] = [
     category: "Paid Social",
     date: "2026-05-08",
     readTime: "5 min read",
-    author: "Sneha Joshi",
+    author: "Ritesh Priyankar",
     metaTitle: "Meta Ads Creative Testing Framework — Race Digital",
     metaDescription:
       "A repeatable Meta ads creative testing loop: three hooks, one offer, clear thresholds and weekly iteration that keeps CPA under control.",

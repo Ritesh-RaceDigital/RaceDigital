@@ -1,6 +1,6 @@
 import rahul from "@/assets/team-rahul.webp";
 import kishan from "@/assets/team-kishan.webp";
-import sneha from "@/assets/team-sneha.webp";
+import salina from "@/assets/team-salina.webp";
 import karan from "@/assets/team-karan.webp";
 import neha from "@/assets/team-neha.webp";
 import jay from "@/assets/team-jay.webp";
@@ -36,12 +36,12 @@ export const team: TeamMember[] = [
     photo: kishan,
   },
   {
-    name: "Sneha Joshi",
-    role: "Social Media Strategist",
-    focus: "Meta, LinkedIn, creative",
-    note: "Builds hooks that stop the scroll, then tests ten more to prove the first one wasn't luck.",
-    initials: "SJ",
-    photo: sneha,
+    name: "Salina Siddiqui",
+    role: "UI/UX Designer",
+    focus: "UI/UX, web design",
+    note: "Turns briefs into interfaces people can use without thinking — layouts, flows and the details that make a page easy to act on.",
+    initials: "SS",
+    photo: salina,
   },
   {
     name: "Karan Desai",
