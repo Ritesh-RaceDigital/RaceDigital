@@ -1,5 +1,4 @@
 import rahul from "@/assets/team-rahul.webp";
-import priya from "@/assets/team-priya.webp";
 import aditya from "@/assets/team-aditya.webp";
 import sneha from "@/assets/team-sneha.webp";
 import karan from "@/assets/team-karan.webp";
@@ -24,14 +23,6 @@ export const leadership: TeamMember[] = [
     note: "Started Race Digital after a decade of running acquisition for retail brands. Still writes the first draft of every growth plan.",
     initials: "RM",
     photo: rahul,
-  },
-  {
-    name: "Priya Shah",
-    role: "Head of Search",
-    focus: "SEO, technical audits",
-    note: "Obsessive about crawl budgets and internal linking. Has migrated more sites than she cares to count — without losing rankings.",
-    initials: "PS",
-    photo: priya,
   },
 ];
 

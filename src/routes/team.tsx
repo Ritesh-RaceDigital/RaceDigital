@@ -47,7 +47,7 @@ function TeamPage() {
 
       <section className="mx-auto max-w-[1440px] px-5 py-20 md:px-8 md:py-28">
         <p className="tag">leadership</p>
-        <div className="mt-10 grid gap-12 md:grid-cols-2">
+        <div className={`mt-10 grid gap-12 ${leadership.length > 1 ? "md:grid-cols-2" : "max-w-2xl"}`}>
           {leadership.map((m, i) => (
             <Reveal key={m.name} delay={i * 80}>
               <article className="group grid gap-6 sm:grid-cols-[minmax(0,0.85fr)_minmax(0,1fr)] sm:items-center">

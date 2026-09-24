@@ -20,7 +20,7 @@ export const posts: BlogPost[] = [
     category: "SEO",
     date: "2026-07-28",
     readTime: "6 min read",
-    author: "Priya Shah",
+    author: "Karan Desai",
     metaTitle: "Local SEO Checklist for Ahmedabad Businesses — Race Digital",
     metaDescription:
       "The practical local SEO checklist Race Digital runs for Ahmedabad businesses: listings, service pages, internal links and the tracking that proves it worked.",
