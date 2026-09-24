@@ -1,4 +1,4 @@
-export const SITE_URL = "https://human-crafted-design.lovable.app";
+export const SITE_URL = "https://racedigital.in";
 
 export const ORG = {
   name: "Race Digital",
@@ -64,6 +64,26 @@ export function faqLd(faqs: { q: string; a: string }[]) {
       name: f.q,
       acceptedAnswer: { "@type": "Answer", text: f.a },
     })),
+  };
+}
+
+export function organizationLd() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    name: ORG.name,
+    legalName: ORG.legalName,
+    url: SITE_URL,
+    telephone: ORG.phone,
+    email: ORG.email,
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: ORG.street,
+      addressLocality: ORG.city,
+      addressRegion: ORG.region,
+      postalCode: ORG.postalCode,
+      addressCountry: ORG.country,
+    },
   };
 }
 

@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://human-crafted-design.lovable.app/sitemap.xml
+Sitemap: https://racedigital.in/sitemap.xml
