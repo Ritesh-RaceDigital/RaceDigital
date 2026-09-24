@@ -1,5 +1,5 @@
 import rahul from "@/assets/team-rahul.webp";
-import aditya from "@/assets/team-aditya.webp";
+import kishan from "@/assets/team-kishan.webp";
 import sneha from "@/assets/team-sneha.webp";
 import karan from "@/assets/team-karan.webp";
 import neha from "@/assets/team-neha.webp";
@@ -28,12 +28,12 @@ export const leadership: TeamMember[] = [
 
 export const team: TeamMember[] = [
   {
-    name: "Aditya Patel",
-    role: "Performance Marketing Manager",
-    focus: "Google Ads, Shopping",
-    note: "Treats every account like his own money is in it. Cuts wasted spend before he asks for more budget.",
-    initials: "AP",
-    photo: aditya,
+    name: "Kishan Parmar",
+    role: "SEO Specialist",
+    focus: "SEO, technical audits",
+    note: "Owns search across every account — technical audits, on-page fixes and the tracking that shows what actually moved.",
+    initials: "KP",
+    photo: kishan,
   },
   {
     name: "Sneha Joshi",

@@ -56,7 +56,7 @@ export const posts: BlogPost[] = [
     category: "PPC",
     date: "2026-07-12",
     readTime: "5 min read",
-    author: "Aditya Patel",
+    author: "Ritesh Priyankar",
     metaTitle: "Where Google Ads Budget Leaks — PPC Notes | Race Digital",
     metaDescription:
       "The five recurring leaks we find in Google Ads accounts — broad match, missing negatives, brand blending, ignored search terms and untracked calls.",

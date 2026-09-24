@@ -38,7 +38,7 @@ function TeamPage() {
         accent="answers its own emails."
         intro="No account-manager relay race. The people who plan your growth are the ones building the campaigns, writing the pages and reading the numbers on Monday morning."
         bullets={[
-          "Eight specialists, one room in Makarba",
+          "Seven specialists, one room in Makarba",
           "Senior hands on every account",
           "You always know who did the work",
         ]}
