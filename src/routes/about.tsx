@@ -13,7 +13,7 @@ import studio from "@/assets/studio.jpg";
 
 const title = "About Race Digital — Data-Driven Marketing Agency, Ahmedabad";
 const description =
-  "Race Digital is a data-driven digital marketing agency in Makarba, Ahmedabad. Meet the team behind SEO, PPC, paid social, content and web design that delivers ROI.";
+  "Race Digital is a data-driven digital marketing agency in Makarba, Ahmedabad. Meet the team behind SEO, PPC, paid social, content and web design.";
 
 export const Route = createFileRoute("/about")({
   head: () => ({

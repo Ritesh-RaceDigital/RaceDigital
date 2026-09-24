@@ -114,7 +114,7 @@ export const caseStudies: CaseStudy[] = [
       who: "General manager, dealer group",
     },
     serviceSlugs: ["seo", "content-marketing", "web-design"],
-    metaTitle: "TOYOTA Dealer Case Study — 40% More Website Users | Race Digital",
+    metaTitle: "TOYOTA Dealer Case Study — 40% More Traffic | Race Digital",
     metaDescription:
       "Technical SEO, service-led content and local search work that grew a TOYOTA dealer group's monthly website users by 40% and tripled service enquiries.",
   },
@@ -164,7 +164,7 @@ export const caseStudies: CaseStudy[] = [
       who: "Owner, The Cupule",
     },
     serviceSlugs: ["seo", "content-marketing", "paid-social-ads"],
-    metaTitle: "The Cupule Case Study — 190% More Organic Traffic | Race Digital",
+    metaTitle: "The Cupule Case Study — 190% Traffic Growth | Race Digital",
     metaDescription:
       "How Race Digital grew a wedding venue's organic traffic 190% and lifted conversions 30% with content, local SEO and seasonal paid social.",
   },
@@ -264,7 +264,7 @@ export const caseStudies: CaseStudy[] = [
       who: "Director, components manufacturer",
     },
     serviceSlugs: ["seo", "link-building", "content-marketing"],
-    metaTitle: "B2B Manufacturing SEO Case Study — 5x Enquiries | Race Digital",
+    metaTitle: "B2B Manufacturing Case Study — 5x Enquiries | Race Digital",
     metaDescription:
       "How Race Digital turned a PDF catalogue into 300 indexable pages and multiplied a manufacturer's qualified export enquiries fivefold in twelve months.",
   },
@@ -314,7 +314,7 @@ export const caseStudies: CaseStudy[] = [
       who: "Operations head, clinic network",
     },
     serviceSlugs: ["seo", "web-design", "ppc"],
-    metaTitle: "Healthcare Local SEO Case Study — 112% More Bookings | Race Digital",
+    metaTitle: "Healthcare SEO Case Study — 112% Bookings | Race Digital",
     metaDescription:
       "Local SEO and a rebuilt booking flow that doubled appointments for a six-clinic network in Ahmedabad, with 41% of bookings made after hours.",
   },

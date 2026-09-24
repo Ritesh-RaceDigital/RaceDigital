@@ -57,7 +57,7 @@ export const posts: BlogPost[] = [
     date: "2026-07-12",
     readTime: "5 min read",
     author: "Aditya Patel",
-    metaTitle: "Where Google Ads Budget Leaks — PPC Audit Notes | Race Digital",
+    metaTitle: "Where Google Ads Budget Leaks — PPC Notes | Race Digital",
     metaDescription:
       "The five recurring leaks we find in Google Ads accounts — broad match, missing negatives, brand blending, ignored search terms and untracked calls.",
     body: [
@@ -123,7 +123,7 @@ export const posts: BlogPost[] = [
     date: "2026-06-14",
     readTime: "5 min read",
     author: "Karan Desai",
-    metaTitle: "Content That Earns Links — Link Building Notes | Race Digital",
+    metaTitle: "Content That Earns Links — Link Building | Race Digital",
     metaDescription:
       "Why link building campaigns fail, and the kinds of assets — original data, useful tools, honest guides — that editors actually cite.",
     body: [
