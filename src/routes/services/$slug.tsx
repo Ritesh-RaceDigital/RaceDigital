@@ -1,4 +1,4 @@
-import { pageHead, breadcrumbLd, serviceLd } from "@/lib/seo";
+import { pageHead, breadcrumbLd, serviceLd, faqLd } from "@/lib/seo";
 import { createFileRoute, notFound } from "@tanstack/react-router";
 
 import { ServicePage } from "@/components/site/service-page";
@@ -37,6 +37,10 @@ export const Route = createFileRoute("/services/$slug")({
               { name: nav, path },
             ]),
           ),
+        },
+        {
+          type: "application/ld+json",
+          children: JSON.stringify(faqLd(loaderData.service.faqs)),
         },
       ],
     };
