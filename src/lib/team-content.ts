@@ -3,7 +3,7 @@ import kishan from "@/assets/team-kishan.webp";
 import salina from "@/assets/team-salina.webp";
 import nafe from "@/assets/team-nafe.webp";
 import momin from "@/assets/team-momin.webp";
-import jay from "@/assets/team-jay.webp";
+import tanzil from "@/assets/team-tanzil.webp";
 import ritika from "@/assets/team-ritika.webp";
 
 export interface TeamMember {
@@ -60,12 +60,12 @@ export const team: TeamMember[] = [
     photo: momin,
   },
   {
-    name: "Jay Bhatt",
-    role: "Web Developer",
-    focus: "Front-end, Core Web Vitals",
-    note: "Ships fast sites and then makes them faster. Speed is a feature, not a bonus.",
-    initials: "JB",
-    photo: jay,
+    name: "Tanzil Valani",
+    role: "Content Creator & Social Media Manager",
+    focus: "Content, social media",
+    note: "Plans the content calendar and runs the accounts day to day, from the first draft to what actually gets posted.",
+    initials: "TV",
+    photo: tanzil,
   },
   {
     name: "Ritika Nair",
