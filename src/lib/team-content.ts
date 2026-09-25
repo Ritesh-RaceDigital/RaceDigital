@@ -2,7 +2,7 @@ import rahul from "@/assets/team-rahul.webp";
 import kishan from "@/assets/team-kishan.webp";
 import salina from "@/assets/team-salina.webp";
 import nafe from "@/assets/team-nafe.webp";
-import neha from "@/assets/team-neha.webp";
+import momin from "@/assets/team-momin.webp";
 import jay from "@/assets/team-jay.webp";
 import ritika from "@/assets/team-ritika.webp";
 
@@ -52,12 +52,12 @@ export const team: TeamMember[] = [
     photo: nafe,
   },
   {
-    name: "Neha Trivedi",
-    role: "UI/UX Designer",
-    focus: "Web design, CRO",
-    note: "Designs for the person on a patchy 4G connection, not the one on a 27-inch monitor.",
-    initials: "NT",
-    photo: neha,
+    name: "Momin Gulamhussain",
+    role: "Video Editor",
+    focus: "Reels, ad creative",
+    note: "Cuts footage into the kind of reels people actually watch to the end, then trims it further.",
+    initials: "MG",
+    photo: momin,
   },
   {
     name: "Jay Bhatt",

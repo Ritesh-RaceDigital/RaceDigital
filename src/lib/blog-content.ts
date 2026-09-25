@@ -89,7 +89,7 @@ export const posts: BlogPost[] = [
     category: "Web Design",
     date: "2026-06-30",
     readTime: "4 min read",
-    author: "Neha Trivedi",
+    author: "Salina Siddiqui",
     metaTitle: "Landing Pages That Convert — Structure We Use | Race Digital",
     metaDescription:
       "The landing page structure Race Digital uses for paid campaigns: one promise, proof early, objections handled and a single obvious next step.",
