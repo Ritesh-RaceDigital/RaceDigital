@@ -1,4 +1,4 @@
-import rahul from "@/assets/team-rahul.webp";
+import ritesh from "@/assets/team-ritesh.webp";
 import kishan from "@/assets/team-kishan.webp";
 import salina from "@/assets/team-salina.webp";
 import nafe from "@/assets/team-nafe.webp";
@@ -22,7 +22,7 @@ export const leadership: TeamMember[] = [
     focus: "Strategy, paid media",
     note: "Started Race Digital after a decade of running acquisition for retail brands. Still writes the first draft of every growth plan.",
     initials: "RP",
-    photo: rahul,
+    photo: ritesh,
   },
 ];
 

@@ -5,7 +5,16 @@ import { PageShell } from "@/components/site/page-shell";
 import { PageHero } from "@/components/site/page-hero";
 import { Reveal } from "@/components/site/reveal";
 import { FinalCta } from "@/components/site/final-cta";
+import { Counter } from "@/components/site/counter";
 import { leadership, team, teamValues } from "@/lib/team-content";
+
+// Same figures used in the homepage hero stats — repeated here so a single
+// founder's spotlight has real credibility markers instead of empty space.
+const founderStats = [
+  { to: 2, suffix: "+", label: "Years in business" },
+  { to: 50, suffix: "+", label: "Clients served" },
+  { to: 6, label: "Service lines" },
+];
 
 const title = "Meet the Team — Race Digital, Ahmedabad";
 const description =
@@ -47,37 +56,80 @@ function TeamPage() {
 
       <section className="mx-auto max-w-[1440px] px-5 py-20 md:px-8 md:py-28">
         <p className="tag">leadership</p>
-        <div className={`mt-10 grid gap-12 ${leadership.length > 1 ? "md:grid-cols-2" : "max-w-2xl"}`}>
-          {leadership.map((m, i) => (
-            <Reveal key={m.name} delay={i * 80}>
-              <article className="group grid gap-6 sm:grid-cols-[minmax(0,0.85fr)_minmax(0,1fr)] sm:items-center">
-                <div className="relative overflow-hidden rounded-[1.75rem] bg-secondary">
-                  <img
-                    src={m.photo}
-                    alt={`${m.name}, ${m.role} at Race Digital`}
-                    loading="lazy"
-                    width={640}
-                    height={800}
-                    className="aspect-[4/5] w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
-                  />
-                  <span className="absolute bottom-4 left-4 rounded-full bg-background/90 px-3 py-1 text-[0.65rem] uppercase tracking-[0.18em] text-muted-foreground backdrop-blur">
-                    {m.focus}
-                  </span>
-                </div>
-                <div>
-                  <h2 className="font-display text-[1.7rem] font-extrabold leading-tight tracking-tight">
-                    {m.name}
-                  </h2>
-                  <p className="mt-1 text-sm font-medium text-g-blue">{m.role}</p>
-                  <span className="mt-5 block h-px w-12 bg-g-blue transition-all duration-500 group-hover:w-20" />
-                  <p className="mt-5 text-[1.02rem] leading-relaxed text-muted-foreground">
-                    {m.note}
-                  </p>
-                </div>
-              </article>
-            </Reveal>
-          ))}
-        </div>
+
+        {leadership.length === 1 ? (
+          <Reveal className="mt-10">
+            <div className="grid gap-12 lg:grid-cols-[minmax(0,26rem)_1fr] lg:items-center">
+              <div className="group relative overflow-hidden rounded-[1.75rem] bg-secondary">
+                <img
+                  src={leadership[0].photo}
+                  alt={`${leadership[0].name}, ${leadership[0].role} at Race Digital`}
+                  loading="lazy"
+                  width={640}
+                  height={800}
+                  className="aspect-[4/5] w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
+                />
+                <span className="absolute bottom-4 left-4 rounded-full bg-background/90 px-3 py-1 text-[0.65rem] uppercase tracking-[0.18em] text-muted-foreground backdrop-blur">
+                  {leadership[0].focus}
+                </span>
+              </div>
+
+              <div>
+                <h2 className="font-display text-[2.1rem] font-extrabold leading-tight tracking-tight sm:text-[2.6rem]">
+                  {leadership[0].name}
+                </h2>
+                <p className="mt-2 text-base font-medium text-g-blue">{leadership[0].role}</p>
+                <span className="mt-6 block h-px w-16 bg-g-blue" />
+                <p className="mt-6 max-w-lg text-[1.05rem] leading-relaxed text-muted-foreground">
+                  {leadership[0].note}
+                </p>
+
+                <dl className="mt-10 grid max-w-lg grid-cols-3 gap-6 border-t border-border pt-8">
+                  {founderStats.map((s) => (
+                    <div key={s.label}>
+                      <dd className="font-display text-[1.9rem] font-extrabold tracking-tight">
+                        <Counter to={s.to} suffix={s.suffix} />
+                      </dd>
+                      <dt className="mt-1 text-[0.68rem] uppercase leading-snug tracking-[0.14em] text-muted-foreground">
+                        {s.label}
+                      </dt>
+                    </div>
+                  ))}
+                </dl>
+              </div>
+            </div>
+          </Reveal>
+        ) : (
+          <div className="mt-10 grid gap-12 md:grid-cols-2">
+            {leadership.map((m, i) => (
+              <Reveal key={m.name} delay={i * 80}>
+                <article className="group grid gap-6 sm:grid-cols-[minmax(0,0.85fr)_minmax(0,1fr)] sm:items-center">
+                  <div className="relative overflow-hidden rounded-[1.75rem] bg-secondary">
+                    <img
+                      src={m.photo}
+                      alt={`${m.name}, ${m.role} at Race Digital`}
+                      loading="lazy"
+                      width={640}
+                      height={800}
+                      className="aspect-[4/5] w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
+                    />
+                    <span className="absolute bottom-4 left-4 rounded-full bg-background/90 px-3 py-1 text-[0.65rem] uppercase tracking-[0.18em] text-muted-foreground backdrop-blur">
+                      {m.focus}
+                    </span>
+                  </div>
+                  <div>
+                    <h2 className="font-display text-[1.7rem] font-extrabold leading-tight tracking-tight">
+                      {m.name}
+                    </h2>
+                    <p className="mt-1 text-sm font-medium text-g-blue">{m.role}</p>
+                    <span className="mt-5 block h-px w-12 bg-g-blue transition-all duration-500 group-hover:w-20" />
+                    <p className="mt-5 text-[1.02rem] leading-relaxed text-muted-foreground">{m.note}</p>
+                  </div>
+                </article>
+              </Reveal>
+            ))}
+          </div>
+        )}
       </section>
 
       <section className="border-y border-border bg-secondary/30">
