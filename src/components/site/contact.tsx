@@ -3,6 +3,10 @@ import { useState, type FormEvent } from "react";
 
 import { Reveal } from "./reveal";
 
+// Public submission key from web3forms.com — safe to expose client-side,
+// it's scoped to this site and rate-limited, not a secret credential.
+const WEB3FORMS_ACCESS_KEY = "YOUR_ACCESS_KEY_HERE";
+
 const interests = ["SEO", "PPC advertising", "Paid social ads", "Content marketing", "Web design", "Not sure yet"];
 
 const lines = [
@@ -15,31 +19,44 @@ const lines = [
 export function Contact() {
   const [interest, setInterest] = useState(interests[0]);
   const [sent, setSent] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState(false);
 
-  const onSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const data = new FormData(e.currentTarget);
+    const form = e.currentTarget;
+    const data = new FormData(form);
     const get = (k: string) => String(data.get(k) ?? "").trim();
     const name = `${get("first")} ${get("last")}`.trim();
 
-    const body = [
-      `Name: ${name}`,
-      `Email: ${get("email")}`,
-      `Phone: ${get("phone")}`,
-      `Company: ${get("company") || "—"}`,
-      `Interested in: ${interest}`,
-      "",
-      "Project:",
-      get("message") || "—",
-    ].join("\n");
+    data.append("access_key", WEB3FORMS_ACCESS_KEY);
+    data.set("interest", interest);
+    data.set("subject", `Quote request — ${name || "New enquiry"} (${interest})`);
+    data.set("from_name", "Race Digital website");
 
-    window.location.href = `mailto:info@racedigital.in?subject=${encodeURIComponent(
-      `Quote request — ${name || "New enquiry"} (${interest})`,
-    )}&body=${encodeURIComponent(body)}`;
+    setSending(true);
+    setError(false);
 
-    setSent(true);
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: data,
+      });
+      const result = await res.json();
+      if (result.success) {
+        setSent(true);
+        form.reset();
+        setInterest(interests[0]);
+      } else {
+        setError(true);
+      }
+    } catch {
+      setError(true);
+    } finally {
+      setSending(false);
+    }
   };
-
 
   const field =
     "w-full border-0 border-b border-border bg-transparent pb-3 pt-2 text-[1.05rem] outline-none transition-colors placeholder:text-muted-foreground/60 focus:border-g-blue";
@@ -104,9 +121,19 @@ export function Contact() {
                 </span>
               </a>
               <div className="flex flex-wrap gap-5 text-sm text-muted-foreground">
-                {["Instagram", "Facebook", "LinkedIn"].map((s) => (
-                  <a key={s} href="#talk" className="link-draw hover:text-foreground">
-                    {s}
+                {[
+                  { label: "Instagram", href: "https://www.instagram.com/theracedigital/" },
+                  { label: "Facebook", href: "https://www.facebook.com/profile.php?id=61573025625154" },
+                  { label: "LinkedIn", href: "https://www.linkedin.com/company/racedigital/" },
+                ].map((s) => (
+                  <a
+                    key={s.label}
+                    href={s.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="link-draw hover:text-foreground"
+                  >
+                    {s.label}
                   </a>
                 ))}
               </div>
@@ -120,12 +147,14 @@ export function Contact() {
                 <p className="tag text-g-blue">received</p>
                 <h3 className="display-lg mt-6 max-w-[16ch]">Got it. Give us a day.</h3>
                 <p className="mt-6 max-w-sm leading-relaxed text-muted-foreground">
-                  Your email app should have opened with the brief ready to send. If it didn't,
-                  write to info@racedigital.in and a strategist will come back within one working day.
+                  Your brief is in. A strategist will come back within one working day. In a
+                  hurry? Write to info@racedigital.in or WhatsApp us.
                 </p>
               </div>
             ) : (
               <form onSubmit={onSubmit} className="border-t-2 border-g-blue bg-card px-7 py-10 sm:px-12 sm:py-14">
+                <input type="checkbox" name="botcheck" className="hidden" tabIndex={-1} autoComplete="off" />
+
                 <p className="tag">tell us about your project</p>
 
                 <div className="mt-10 grid gap-9 sm:grid-cols-2">
@@ -181,12 +210,19 @@ export function Contact() {
                   />
                 </label>
 
+                {error && (
+                  <p className="mt-8 text-sm text-destructive">
+                    Something went wrong sending that. Please try again, or write to
+                    info@racedigital.in directly.
+                  </p>
+                )}
+
                 <div className="mt-11 flex flex-wrap items-center justify-between gap-5 border-t border-border pt-8">
                   <p className="max-w-[26ch] text-xs leading-relaxed text-muted-foreground">
                     No newsletter, no CRM drip. Just a free quote and a reply.
                   </p>
-                  <button type="submit" className="pill group border-foreground">
-                    Get a quote
+                  <button type="submit" disabled={sending} className="pill group border-foreground disabled:opacity-60">
+                    {sending ? "Sending…" : "Get a quote"}
                     <span className="pill-chip group-hover:translate-x-0.5">
                       <ChevronRight className="size-4" strokeWidth={2.4} />
                     </span>

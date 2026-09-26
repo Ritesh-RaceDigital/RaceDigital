@@ -83,5 +83,9 @@ export const contact = {
   whatsapp: "https://wa.me/916353663006",
   hours: "Mon–Sat, 10am to 7pm IST",
   responseTime: "Within one working day",
-  social: ["Instagram", "Facebook", "LinkedIn"],
+  social: [
+    { label: "Instagram", url: "https://www.instagram.com/theracedigital/" },
+    { label: "Facebook", url: "https://www.facebook.com/profile.php?id=61573025625154" },
+    { label: "LinkedIn", url: "https://www.linkedin.com/company/racedigital/" },
+  ],
 } as const;

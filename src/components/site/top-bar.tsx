@@ -1,9 +1,9 @@
 import { Mail, Phone } from "lucide-react";
 
 const socials = [
-  { label: "Instagram", href: "https://instagram.com/" },
-  { label: "Facebook", href: "https://facebook.com/" },
-  { label: "LinkedIn", href: "https://linkedin.com/" },
+  { label: "Instagram", href: "https://www.instagram.com/theracedigital/" },
+  { label: "Facebook", href: "https://www.facebook.com/profile.php?id=61573025625154" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/company/racedigital/" },
 ];
 
 export function TopBar() {

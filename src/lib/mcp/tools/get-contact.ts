@@ -20,7 +20,7 @@ export default defineTool({
           `WhatsApp: ${contact.whatsapp}`,
           `Hours: ${contact.hours}`,
           `Reply time: ${contact.responseTime}`,
-          `Social: ${contact.social.join(", ")}`,
+          `Social: ${contact.social.map((s) => `${s.label} (${s.url})`).join(", ")}`,
         ].join("\n"),
       },
     ],
