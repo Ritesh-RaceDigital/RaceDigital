@@ -5,7 +5,7 @@ import { Reveal } from "./reveal";
 
 // Public submission key from web3forms.com — safe to expose client-side,
 // it's scoped to this site and rate-limited, not a secret credential.
-const WEB3FORMS_ACCESS_KEY = "YOUR_ACCESS_KEY_HERE";
+const WEB3FORMS_ACCESS_KEY = "aaab441b-dfac-4bf3-862d-cb05cf433d79";
 
 const interests = ["SEO", "PPC advertising", "Paid social ads", "Content marketing", "Web design", "Not sure yet"];
 
