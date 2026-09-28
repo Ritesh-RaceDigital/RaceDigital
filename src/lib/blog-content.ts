@@ -149,7 +149,7 @@ export const posts: BlogPost[] = [
     category: "Analytics",
     date: "2026-05-29",
     readTime: "4 min read",
-    author: "Ritika Nair",
+    author: "Ritesh Priyankar",
     metaTitle: "GA4 Reporting Leadership Reads — Race Digital",
     metaDescription:
       "How to build a one-page marketing report from GA4: spend, return, what changed and next month's plan — without the dashboard clutter.",

@@ -4,7 +4,7 @@ import salina from "@/assets/team-salina.webp";
 import nafe from "@/assets/team-nafe.webp";
 import momin from "@/assets/team-momin.webp";
 import tanzil from "@/assets/team-tanzil.webp";
-import ritika from "@/assets/team-ritika.webp";
+import faeza from "@/assets/team-faeza.webp";
 
 export interface TeamMember {
   name: string;
@@ -68,12 +68,12 @@ export const team: TeamMember[] = [
     photo: tanzil,
   },
   {
-    name: "Ritika Nair",
-    role: "Analytics & Reporting",
-    focus: "GA4, dashboards",
-    note: "Turns messy event data into one page your leadership team actually reads.",
-    initials: "RN",
-    photo: ritika,
+    name: "Faeza Vora",
+    role: "Graphics Designer",
+    focus: "Visual design, branding",
+    note: "Designs the graphics behind every campaign — social creative, ad visuals and the brand details that make work look finished.",
+    initials: "FV",
+    photo: faeza,
   },
 ];
 
