@@ -5,6 +5,7 @@ import nafe from "@/assets/team-nafe.webp";
 import momin from "@/assets/team-momin.webp";
 import tanzil from "@/assets/team-tanzil.webp";
 import faeza from "@/assets/team-faeza.webp";
+import chetan from "@/assets/team-chetan.webp";
 
 export interface TeamMember {
   name: string;
@@ -74,6 +75,14 @@ export const team: TeamMember[] = [
     note: "Designs the graphics behind every campaign — social creative, ad visuals and the brand details that make work look finished.",
     initials: "FV",
     photo: faeza,
+  },
+  {
+    name: "Chetan Kumar",
+    role: "Website Developer & WordPress Expert",
+    focus: "Web development, WordPress",
+    note: "Builds and maintains the sites — from a WordPress rebuild to the small fixes that keep a site running fast.",
+    initials: "CK",
+    photo: chetan,
   },
 ];
 
