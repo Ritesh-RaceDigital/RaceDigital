@@ -6,6 +6,7 @@ import { PageHero } from "@/components/site/page-hero";
 import { Reveal } from "@/components/site/reveal";
 import { FinalCta } from "@/components/site/final-cta";
 import { Counter } from "@/components/site/counter";
+import { CultureGallery } from "@/components/site/culture-gallery";
 import { leadership, team, teamValues } from "@/lib/team-content";
 
 // Same figures used in the homepage hero stats — repeated here so a single
@@ -175,6 +176,7 @@ function TeamPage() {
         </div>
       </section>
 
+      <CultureGallery />
 
       <section className="mx-auto max-w-[1440px] px-5 py-20 md:px-8 md:py-28">
         <p className="tag">how we work</p>
