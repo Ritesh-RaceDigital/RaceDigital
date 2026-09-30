@@ -62,9 +62,9 @@ export const team: TeamMember[] = [
   },
   {
     name: "Tanzil Valani",
-    role: "Content Creator & Social Media Manager",
-    focus: "Content, social media",
-    note: "Plans the content calendar and runs the accounts day to day, from the first draft to what actually gets posted.",
+    role: "Content Creator",
+    focus: "Content creation",
+    note: "Plans the content calendar and writes every draft, from the first idea to what actually gets posted.",
     initials: "TV",
     photo: tanzil,
   },
