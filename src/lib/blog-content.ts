@@ -4,7 +4,6 @@ export interface BlogPost {
   excerpt: string;
   category: string;
   date: string;
-  readTime: string;
   author: string;
   metaTitle: string;
   metaDescription: string;
@@ -19,7 +18,6 @@ export const posts: BlogPost[] = [
       "Before we chase keywords, we fix the boring things: business listings, service pages and the internal links nobody audits. Here's the exact order we work in.",
     category: "SEO",
     date: "2026-07-28",
-    readTime: "6 min read",
     author: "Kishan Parmar",
     metaTitle: "Local SEO Checklist for Ahmedabad Businesses — Race Digital",
     metaDescription:
@@ -55,7 +53,6 @@ export const posts: BlogPost[] = [
       "Four audits later, the same five leaks show up: broad match without guardrails, no negatives, unsegmented brand, ignored search terms and untracked calls.",
     category: "PPC",
     date: "2026-07-12",
-    readTime: "5 min read",
     author: "Ritesh Priyankar",
     metaTitle: "Where Google Ads Budget Leaks — PPC Notes | Race Digital",
     metaDescription:
@@ -88,7 +85,6 @@ export const posts: BlogPost[] = [
       "Most pages answer questions nobody asked and skip the three that matter. Here's the structure we use when a campaign has to earn its budget back.",
     category: "Web Design",
     date: "2026-06-30",
-    readTime: "4 min read",
     author: "Salina Siddiqui",
     metaTitle: "Landing Pages That Convert — Structure We Use | Race Digital",
     metaDescription:
@@ -121,7 +117,6 @@ export const posts: BlogPost[] = [
       "Outreach doesn't fix weak assets. If the page you're pitching has nothing worth citing, the reply rate tells you exactly that.",
     category: "Content",
     date: "2026-06-14",
-    readTime: "5 min read",
     author: "Kishan Parmar",
     metaTitle: "Content That Earns Links — Link Building | Race Digital",
     metaDescription:
@@ -148,7 +143,6 @@ export const posts: BlogPost[] = [
       "Nobody reads a 40-tab dashboard. We ship a single page: what we spent, what came back, what changed, and what happens next month.",
     category: "Analytics",
     date: "2026-05-29",
-    readTime: "4 min read",
     author: "Ritesh Priyankar",
     metaTitle: "GA4 Reporting Leadership Reads — Race Digital",
     metaDescription:
@@ -175,7 +169,6 @@ export const posts: BlogPost[] = [
       "Three hooks, one offer, a hard stop at the learning threshold. A simple loop beats a clever one you can't repeat every week.",
     category: "Paid Social",
     date: "2026-05-08",
-    readTime: "5 min read",
     author: "Ritesh Priyankar",
     metaTitle: "Meta Ads Creative Testing Framework — Race Digital",
     metaDescription:
@@ -203,4 +196,19 @@ export function formatPostDate(iso: string) {
     month: "short",
     year: "numeric",
   });
+}
+
+const WORDS_PER_MINUTE = 200;
+
+export function getReadTime(post: BlogPost) {
+  const wordCount = post.body.reduce((total, section) => {
+    const headingWords = section.heading.split(/\s+/).filter(Boolean).length;
+    const bodyWords = section.paragraphs.reduce(
+      (sum, p) => sum + p.split(/\s+/).filter(Boolean).length,
+      0,
+    );
+    return total + headingWords + bodyWords;
+  }, 0);
+  const minutes = Math.max(1, Math.round(wordCount / WORDS_PER_MINUTE));
+  return `${minutes} min read`;
 }

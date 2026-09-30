@@ -34,25 +34,28 @@ const proofFaces = [
 
 function Letters({ text, className = "" }: { text: string; className?: string }) {
   let i = -1;
+  const words = text.split(" ");
   return (
     <span className={className}>
-      {text.split(" ").map((word, w, arr) => (
-        <span
-          key={`${word}-${w}`}
-          className={`inline-block whitespace-nowrap${w === arr.length - 1 ? "" : " mr-[0.24em]"}`}
-        >
-          {word.split("").map((ch, c) => {
-            i += 1;
-            return (
-              <span
-                key={`${ch}-${c}`}
-                className="letter-in inline-block"
-                style={{ animationDelay: `${140 + i * 22}ms` }}
-              >
-                {ch}
-              </span>
-            );
-          })}
+      {words.map((word, w) => (
+        <span key={`${word}-${w}`}>
+          <span
+            className={`inline-block whitespace-nowrap${w === words.length - 1 ? "" : " mr-[0.06em]"}`}
+          >
+            {word.split("").map((ch, c) => {
+              i += 1;
+              return (
+                <span
+                  key={`${ch}-${c}`}
+                  className="letter-in inline-block"
+                  style={{ animationDelay: `${140 + i * 22}ms` }}
+                >
+                  {ch}
+                </span>
+              );
+            })}
+          </span>
+          {w < words.length - 1 ? " " : ""}
         </span>
       ))}
     </span>
@@ -154,10 +157,10 @@ export function Hero() {
           Empowering digital success · Ahmedabad
         </p>
 
-        <h1 className="display-xl mt-6 max-w-[16ch] -ml-[0.06em]">
-          <Letters text="Digital marketing solutions" />{" "}
+        <h1 className="display-xl mt-6 max-w-[20ch] -ml-[0.06em]">
+          <Letters text="Digital marketing solutions &" />{" "}
           <span className="text-muted-foreground">
-            <Letters text="tactics that drive growth" />
+            <Letters text="tactics that drive growth in Ahmedabad" />
           </span>
         </h1>
 

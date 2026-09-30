@@ -13,11 +13,11 @@ const cases = [
       "Rebuilt the campaign around high-intent local queries, tightened match types and rewrote ad copy per outlet.",
     result: "−60%",
     resultLabel: "cost per click",
-    sub: "Cheaper CPC with restructured campaigns",
+    sub: "2.4x more tracked orders alongside it",
     accent: "text-g-blue",
   },
   {
-    client: "TOYOTA",
+    client: "Toyota Dealer Group",
     sector: "Automotive · Dealer network",
     problem:
       "A large site with strong brand demand, but thin organic coverage of model and service searches.",
@@ -25,7 +25,7 @@ const cases = [
       "Technical clean-up, model-level content and internal linking mapped to how buyers actually search.",
     result: "+40%",
     resultLabel: "monthly website users",
-    sub: "Sustained month-on-month growth",
+    sub: "Service page enquiries up 3x alongside it",
     accent: "text-g-red",
   },
   {
@@ -36,7 +36,7 @@ const cases = [
     strategy:
       "Search-led content, local SEO and a conversion pass on the enquiry journey across every landing page.",
     result: "+190%",
-    resultLabel: "website traffic",
+    resultLabel: "organic traffic",
     sub: "Conversions up 30% alongside it",
     accent: "text-g-green",
   },

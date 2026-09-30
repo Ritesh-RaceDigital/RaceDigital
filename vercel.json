@@ -1,0 +1,16 @@
+{
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/seo/?", "destination": "/services/seo", "permanent": true },
+    { "source": "/ppc/?", "destination": "/services/ppc", "permanent": true },
+    { "source": "/paid-social-ads/?", "destination": "/services/paid-social-ads", "permanent": true },
+    { "source": "/content-marketing/?", "destination": "/services/content-marketing", "permanent": true },
+    { "source": "/link-building/?", "destination": "/services/link-building", "permanent": true },
+    { "source": "/web-design/?", "destination": "/services/web-design", "permanent": true },
+    { "source": "/e-commerce-custom-web-design/?", "destination": "/services/web-design", "permanent": true },
+    { "source": "/creative/?", "destination": "/services", "permanent": true },
+    { "source": "/reputation-management/?", "destination": "/services", "permanent": true },
+    { "source": "/about-us/?", "destination": "/about", "permanent": true },
+    { "source": "/portfolio/?", "destination": "/case-studies", "permanent": true }
+  ]
+}

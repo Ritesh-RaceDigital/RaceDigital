@@ -81,6 +81,7 @@ function AboutPage() {
         ]}
         aside="We'd rather tell you a channel isn't worth it than take the retainer."
         image={studio}
+        imageAlt="The Race Digital studio at WTT Tower, Makarba, Ahmedabad"
       />
 
       <section className="mx-auto max-w-[1440px] px-5 py-16 md:px-8 md:py-20">

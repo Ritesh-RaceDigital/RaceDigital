@@ -6,7 +6,7 @@ import { PageShell } from "@/components/site/page-shell";
 import { PageHero } from "@/components/site/page-hero";
 import { Reveal } from "@/components/site/reveal";
 import { FinalCta } from "@/components/site/final-cta";
-import { posts, formatPostDate } from "@/lib/blog-content";
+import { posts, formatPostDate, getReadTime } from "@/lib/blog-content";
 
 const title = "Digital Marketing Blog — Race Digital, Ahmedabad";
 const description =
@@ -65,7 +65,7 @@ function BlogIndex() {
                 <p className="text-sm text-muted-foreground">
                   {lead.author}
                   <br />
-                  {formatPostDate(lead.date)} · {lead.readTime}
+                  {formatPostDate(lead.date)} · {getReadTime(lead)}
                 </p>
                 <span className="pill-chip shrink-0 transition-transform duration-300 group-hover:translate-x-1">
                   <ChevronRight className="size-4" strokeWidth={2.4} />
@@ -92,7 +92,7 @@ function BlogIndex() {
                 <p className="text-sm leading-relaxed text-muted-foreground">
                   {p.excerpt}
                   <span className="mt-2 block text-xs text-muted-foreground/80">
-                    {formatPostDate(p.date)} · {p.readTime}
+                    {formatPostDate(p.date)} · {getReadTime(p)}
                   </span>
                 </p>
                 <span className="pill-chip mt-1 shrink-0 transition-transform duration-300 group-hover:translate-x-1">

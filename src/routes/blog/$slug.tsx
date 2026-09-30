@@ -5,7 +5,7 @@ import { ChevronRight } from "lucide-react";
 import { PageShell } from "@/components/site/page-shell";
 import { Reveal } from "@/components/site/reveal";
 import { FinalCta } from "@/components/site/final-cta";
-import { posts, formatPostDate } from "@/lib/blog-content";
+import { posts, formatPostDate, getReadTime } from "@/lib/blog-content";
 
 export const Route = createFileRoute("/blog/$slug")({
   loader: ({ params }) => {
@@ -73,7 +73,10 @@ function BlogPostRoute() {
               {post.excerpt}
             </p>
             <p className="mt-8 border-t border-border pt-5 text-sm text-muted-foreground">
-              {post.author} · {formatPostDate(post.date)} · {post.readTime}
+              <Link to="/team" className="link-draw font-medium text-foreground">
+                {post.author}
+              </Link>{" "}
+              · {formatPostDate(post.date)} · {getReadTime(post)}
             </p>
           </div>
         </header>

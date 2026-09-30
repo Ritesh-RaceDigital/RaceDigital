@@ -63,6 +63,7 @@ function CaseStudiesIndex() {
                 </h2>
                 <p className="mt-2 text-sm text-muted-foreground">
                   {c.location} · {c.duration}
+                  {c.anonymized && " · Client name withheld under NDA"}
                 </p>
               </div>
 

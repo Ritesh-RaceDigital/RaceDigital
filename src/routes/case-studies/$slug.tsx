@@ -65,6 +65,7 @@ function CaseStudyRoute() {
           `Client: ${study.client}`,
           `Engagement: ${study.duration}`,
           `Channels: ${related.map((r) => r.nav).join(", ")}`,
+          ...(study.anonymized ? ["Client name withheld under NDA"] : []),
         ]}
         aside="Numbers pulled from the client's own analytics, not ours."
       />

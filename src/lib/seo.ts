@@ -20,9 +20,12 @@ type PageSeo = {
   image?: string;
 };
 
+const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.png`;
+
 /** Builds the meta + canonical link pair for a leaf route. */
 export function pageHead({ title, description, path, type = "website", image }: PageSeo) {
   const url = `${SITE_URL}${path}`;
+  const ogImage = image ?? DEFAULT_OG_IMAGE;
   const meta: Array<Record<string, string>> = [
     { title },
     { name: "description", content: description },
@@ -31,14 +34,12 @@ export function pageHead({ title, description, path, type = "website", image }: 
     { property: "og:type", content: type },
     { property: "og:url", content: url },
     { property: "og:site_name", content: ORG.name },
+    { property: "og:image", content: ogImage },
     { name: "twitter:card", content: "summary_large_image" },
     { name: "twitter:title", content: title },
     { name: "twitter:description", content: description },
+    { name: "twitter:image", content: ogImage },
   ];
-  if (image) {
-    meta.push({ property: "og:image", content: image });
-    meta.push({ name: "twitter:image", content: image });
-  }
   return { meta, links: [{ rel: "canonical", href: url }] };
 }
 
@@ -71,11 +72,13 @@ export function organizationLd() {
   return {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
+    "@id": `${SITE_URL}/#organization`,
     name: ORG.name,
     legalName: ORG.legalName,
     url: SITE_URL,
     telephone: ORG.phone,
     email: ORG.email,
+    priceRange: "$$",
     address: {
       "@type": "PostalAddress",
       streetAddress: ORG.street,
@@ -84,6 +87,15 @@ export function organizationLd() {
       postalCode: ORG.postalCode,
       addressCountry: ORG.country,
     },
+    areaServed: ["Ahmedabad", "Gujarat", "India"],
+    knowsAbout: [
+      "Search engine optimisation",
+      "Pay per click advertising",
+      "Paid social advertising",
+      "Content marketing",
+      "Link building",
+      "Web design",
+    ],
   };
 }
 

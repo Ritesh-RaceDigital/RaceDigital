@@ -1,4 +1,4 @@
-import { pageHead, faqLd, ORG, SITE_URL } from "@/lib/seo";
+import { pageHead, faqLd } from "@/lib/seo";
 import { faqs } from "@/components/site/faq";
 import { createFileRoute } from "@tanstack/react-router";
 
@@ -10,7 +10,6 @@ import { Services } from "@/components/site/services";
 import { PerksStrip } from "@/components/site/perks-strip";
 import { WhyUs } from "@/components/site/why-us";
 import { Method } from "@/components/site/method";
-import { Work } from "@/components/site/work";
 import { Results } from "@/components/site/results";
 import { Voices } from "@/components/site/voices";
 import { Industries } from "@/components/site/industries";
@@ -19,6 +18,7 @@ import { FinalCta } from "@/components/site/final-cta";
 import { Contact } from "@/components/site/contact";
 import { SiteFooter } from "@/components/site/site-footer";
 import { WhatsappFab } from "@/components/site/whatsapp-fab";
+import { MobileCtaBar } from "@/components/site/mobile-cta-bar";
 
 const title = "Race Digital — Digital Marketing Agency in Ahmedabad";
 const description =
@@ -30,37 +30,6 @@ export const Route = createFileRoute("/")({
     scripts: [
       {
         type: "application/ld+json",
-        children: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "ProfessionalService",
-          "@id": `${SITE_URL}/#organization`,
-          name: ORG.name,
-          url: SITE_URL,
-          description,
-          telephone: ORG.phone,
-          email: ORG.email,
-          priceRange: "$$",
-          address: {
-            "@type": "PostalAddress",
-            streetAddress: ORG.street,
-            addressLocality: ORG.city,
-            addressRegion: ORG.region,
-            postalCode: ORG.postalCode,
-            addressCountry: ORG.country,
-          },
-          areaServed: ["Ahmedabad", "Gujarat", "India"],
-          knowsAbout: [
-            "Search engine optimisation",
-            "Pay per click advertising",
-            "Paid social advertising",
-            "Content marketing",
-            "Link building",
-            "Web design",
-          ],
-        }),
-      },
-      {
-        type: "application/ld+json",
         children: JSON.stringify(faqLd(faqs)),
       },
     ],
@@ -70,7 +39,7 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background pb-[52px] md:pb-0">
       <TopBar />
       <SiteNav />
       <main>
@@ -80,7 +49,6 @@ function Index() {
         <PerksStrip />
         <WhyUs />
         <Method />
-        <Work />
         <Results />
         <Voices />
         <Industries />
@@ -90,6 +58,7 @@ function Index() {
       </main>
       <SiteFooter />
       <WhatsappFab />
+      <MobileCtaBar />
     </div>
   );
 }

@@ -8,9 +8,11 @@ import { Reveal } from "./reveal";
 import { Ticker } from "./ticker";
 import type { ServiceContent } from "@/lib/services-content";
 import { services } from "@/lib/services-content";
+import { caseStudies } from "@/lib/case-studies-content";
 
 export function ServicePage({ service }: { service: ServiceContent }) {
   const others = services.filter((s) => s.slug !== service.slug);
+  const proof = caseStudies.find((c) => c.serviceSlugs.includes(service.slug));
 
   return (
     <PageShell>
@@ -36,7 +38,10 @@ export function ServicePage({ service }: { service: ServiceContent }) {
           </Reveal>
           <Reveal delay={80} className="space-y-6 lg:pt-14">
             {service.lead.body.map((p) => (
-              <p key={p.slice(0, 24)} className="max-w-2xl text-[1.05rem] leading-relaxed text-muted-foreground">
+              <p
+                key={p.slice(0, 24)}
+                className="max-w-2xl text-[1.05rem] leading-relaxed text-muted-foreground"
+              >
                 {p}
               </p>
             ))}
@@ -104,11 +109,46 @@ export function ServicePage({ service }: { service: ServiceContent }) {
         </div>
       </section>
 
-      <FaqList
-        items={service.faqs}
-        heading="Questions, answered plainly."
-        note={service.faqNote}
-      />
+      {/* Proof — one relevant case study */}
+      {proof && (
+        <section className="border-y border-border bg-paper-deep">
+          <div className="mx-auto max-w-[1440px] px-5 py-20 md:px-8 md:py-28">
+            <Reveal className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
+              <div>
+                <p className="tag">Proof it works</p>
+                <h2 className="mt-4 max-w-[14ch] text-[2.1rem] leading-[1.05] sm:text-[2.6rem]">
+                  {proof.headline} <span className="text-g-blue">{proof.accent}</span>
+                </h2>
+                <p className="mt-5 max-w-md text-sm leading-relaxed text-muted-foreground">
+                  {proof.summary}
+                </p>
+                <Link
+                  to="/case-studies/$slug"
+                  params={{ slug: proof.slug }}
+                  className="pill group mt-7 inline-flex"
+                >
+                  Read the full case study
+                  <span className="pill-chip group-hover:translate-x-0.5">
+                    <ChevronRight className="size-4" strokeWidth={2.4} />
+                  </span>
+                </Link>
+              </div>
+              <div className="grid gap-6 sm:grid-cols-3">
+                {proof.results.map((r) => (
+                  <div key={r.label}>
+                    <p className="font-display text-3xl font-extrabold tracking-tight text-g-blue sm:text-4xl">
+                      {r.value}
+                    </p>
+                    <p className="mt-1 text-sm text-muted-foreground">{r.label}</p>
+                  </div>
+                ))}
+              </div>
+            </Reveal>
+          </div>
+        </section>
+      )}
+
+      <FaqList items={service.faqs} heading="Questions, answered plainly." note={service.faqNote} />
 
       {/* Other services */}
       <section className="mx-auto max-w-[1440px] px-5 py-20 md:px-8 md:py-24">

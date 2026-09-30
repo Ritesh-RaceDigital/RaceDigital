@@ -1,3 +1,5 @@
+import { Link } from "@tanstack/react-router";
+
 import { Reveal } from "./reveal";
 
 const quotes = [
@@ -44,10 +46,8 @@ export function Voices() {
               marketing in Ahmedabad.
             </h2>
             <p className="mt-6 max-w-md leading-relaxed text-background/65">
-              Race Digital is a growing digital marketing agency in Ahmedabad. In just two years
-              we&apos;ve helped businesses across industries elevate their online presence and
-              achieve measurable success — with campaigns that are user-friendly, innovative and
-              result-driven.
+              Race Digital is a growing digital marketing agency in Ahmedabad — campaigns that are
+              user-friendly, innovative and result-driven.
             </p>
             <div className="mt-8 flex flex-wrap gap-x-10 gap-y-4 text-sm text-background/55">
               <p>
@@ -59,12 +59,12 @@ export function Voices() {
                 Business certified
               </p>
             </div>
-            <a
-              href="#talk"
+            <Link
+              to="/contact"
               className="link-draw mt-8 inline-block text-sm font-semibold text-g-yellow"
             >
               Get a free quote →
-            </a>
+            </Link>
           </Reveal>
 
           <div className="grid gap-5">

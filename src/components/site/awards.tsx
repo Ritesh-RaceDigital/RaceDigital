@@ -1,9 +1,6 @@
 import { Reveal } from "./reveal";
 
 const recognitions = [
-  { title: "Google Partner", note: "Verified on Google Ads performance and spend standards." },
-  { title: "Semrush Certified Agency Partner", note: "Certified across SEO, PPC and content tooling." },
-  { title: "Best Business of 2024", note: "Recognised locally for consistent client outcomes." },
   { title: "5-star rated web design", note: "Averaged across published client reviews." },
 ];
 

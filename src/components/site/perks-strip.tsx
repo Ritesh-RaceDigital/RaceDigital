@@ -16,7 +16,7 @@ export function PerksStrip() {
     <div className="overflow-hidden border-y border-border bg-foreground py-4">
       <div className="marquee-track gap-8">
         {[0, 1].map((dup) => (
-          <div key={dup} className="flex shrink-0 items-center gap-8 pr-8">
+          <div key={dup} aria-hidden={dup === 1} className="flex shrink-0 items-center gap-8 pr-8">
             {perks.map((p) => (
               <span
                 key={p + dup}

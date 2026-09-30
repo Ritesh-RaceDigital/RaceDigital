@@ -1,4 +1,5 @@
 import { ChevronRight } from "lucide-react";
+import { Link } from "@tanstack/react-router";
 
 import { Reveal } from "./reveal";
 
@@ -9,10 +10,12 @@ const groups = [
     items: [
       {
         title: "SEO",
+        slug: "seo",
         note: "Get found online with expert SEO solutions. Complement it with engaging, user-friendly web designs optimized for all devices.",
       },
       {
         title: "Link Building",
+        slug: "link-building",
         note: "Strengthen your online presence with high-quality backlinks. Our tailored link-building strategies improve search rankings, boost traffic, and enhance your website's authority.",
       },
     ],
@@ -23,10 +26,12 @@ const groups = [
     items: [
       {
         title: "PPC Advertising",
+        slug: "ppc",
         note: "Maximize your ROI with targeted PPC campaigns. We create data-driven strategies to boost visibility, drive traffic, and deliver measurable results for your business.",
       },
       {
         title: "Paid Social Ads",
+        slug: "paid-social-ads",
         note: "Reach your audience where they spend the most time. We craft targeted, engaging paid social ad campaigns that drive brand awareness, traffic, and measurable results.",
       },
     ],
@@ -37,10 +42,12 @@ const groups = [
     items: [
       {
         title: "Content Marketing",
+        slug: "content-marketing",
         note: "Engage your audience with impactful content marketing strategies. We create, optimize, and distribute high-quality content that builds brand authority, drives traffic, and boosts conversions.",
       },
       {
         title: "Web Design",
+        slug: "web-design",
         note: "Create stunning, user-friendly websites tailored to your brand. Our web design services focus on responsive layouts, seamless navigation, and an exceptional user experience.",
       },
     ],
@@ -88,8 +95,9 @@ export function Services() {
                       delay={30}
                       className="group hairline py-8 first:border-t-0 md:first:border-t"
                     >
-                      <a
-                        href="#talk"
+                      <Link
+                        to="/services/$slug"
+                        params={{ slug: s.slug }}
                         className="grid items-start gap-x-10 gap-y-3 lg:grid-cols-[3rem_minmax(0,0.85fr)_minmax(0,1.15fr)_auto]"
                       >
                         <span className="mt-2 font-display text-xs font-medium tabular-nums tracking-[0.2em] text-muted-foreground">
@@ -104,7 +112,7 @@ export function Services() {
                         <span className="pill-chip mt-1 bg-secondary text-foreground transition-all duration-500 group-hover:bg-g-blue group-hover:text-background">
                           <ChevronRight className="size-4" strokeWidth={2.2} />
                         </span>
-                      </a>
+                      </Link>
                     </Reveal>
                   );
                 })}
@@ -122,12 +130,12 @@ export function Services() {
             Not sure where to start? Tell us the goal and we&apos;ll recommend the two channels
             worth funding first.
           </p>
-          <a href="#talk" className="pill group shrink-0">
-            Get a quote
+          <Link to="/contact" className="pill group shrink-0">
+            Get a free audit
             <span className="pill-chip group-hover:translate-x-0.5">
               <ChevronRight className="size-4" strokeWidth={2.4} />
             </span>
-          </a>
+          </Link>
         </Reveal>
       </div>
     </section>

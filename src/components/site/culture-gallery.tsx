@@ -30,7 +30,7 @@ function GalleryRow({ items, reverse = false }: { items: { src: string; alt: str
     <div className="relative overflow-hidden [mask-image:linear-gradient(90deg,transparent,#000_4%,#000_96%,transparent)]">
       <div className={`${reverse ? "marquee-track-reverse" : "marquee-track"} gap-4 sm:gap-5`}>
         {[0, 1].map((dup) => (
-          <div key={dup} className="flex shrink-0 items-center gap-4 pr-4 sm:gap-5 sm:pr-5">
+          <div key={dup} aria-hidden={dup === 1} className="flex shrink-0 items-center gap-4 pr-4 sm:gap-5 sm:pr-5">
             {items.map((it, i) => (
               <img
                 key={it.alt + dup + i}

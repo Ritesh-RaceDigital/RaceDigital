@@ -1,6 +1,7 @@
 export type CaseStudy = {
   slug: string;
   client: string;
+  anonymized?: boolean;
   industry: string;
   location: string;
   duration: string;
@@ -70,7 +71,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "toyota-dealership",
-    client: "TOYOTA dealer group",
+    client: "Toyota Dealer Group",
     industry: "Automotive",
     location: "Gujarat",
     duration: "9 months",
@@ -114,9 +115,9 @@ export const caseStudies: CaseStudy[] = [
       who: "General manager, dealer group",
     },
     serviceSlugs: ["seo", "content-marketing", "web-design"],
-    metaTitle: "TOYOTA Dealer Case Study — 40% More Traffic | Race Digital",
+    metaTitle: "Toyota Dealer Group Case Study — 40% More Traffic | Race Digital",
     metaDescription:
-      "Technical SEO, service-led content and local search work that grew a TOYOTA dealer group's monthly website users by 40% and tripled service enquiries.",
+      "Technical SEO, service-led content and local search work that grew a Toyota Dealer Group's monthly website users by 40% and tripled service enquiries.",
   },
   {
     slug: "the-cupule-wedding-venue",
@@ -171,6 +172,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "d2c-home-decor",
     client: "D2C home décor brand",
+    anonymized: true,
     industry: "Ecommerce",
     location: "Pan-India",
     duration: "6 months",
@@ -221,6 +223,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "b2b-manufacturing",
     client: "Industrial components manufacturer",
+    anonymized: true,
     industry: "B2B manufacturing",
     location: "Gujarat & export",
     duration: "12 months",
@@ -271,6 +274,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "healthcare-clinic-network",
     client: "Multi-speciality clinic network",
+    anonymized: true,
     industry: "Healthcare",
     location: "Ahmedabad",
     duration: "8 months",

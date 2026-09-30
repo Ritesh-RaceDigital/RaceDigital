@@ -11,6 +11,7 @@ export function PageHero({
   bullets,
   aside,
   image,
+  imageAlt,
 }: {
   eyebrow: string;
   title: string;
@@ -19,6 +20,7 @@ export function PageHero({
   bullets?: string[];
   aside?: string;
   image?: string;
+  imageAlt?: string;
 }) {
   return (
     <section className="relative overflow-hidden border-b border-border bg-background">
@@ -72,8 +74,8 @@ export function PageHero({
           <Reveal delay={120} className="mt-16">
             <img
               src={image}
-              alt=""
-              aria-hidden
+              alt={imageAlt ?? ""}
+              aria-hidden={!imageAlt}
               className="h-[16rem] w-full rounded-[2rem] object-cover md:h-[22rem]"
             />
           </Reveal>

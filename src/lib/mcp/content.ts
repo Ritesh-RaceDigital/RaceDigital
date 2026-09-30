@@ -18,17 +18,17 @@ export const caseStudies = [
     strategy:
       "Rebuilt the campaign around high-intent local queries, tightened match types and rewrote ad copy per outlet.",
     result: "60% lower cost per click",
-    detail: "Cheaper CPC with restructured campaigns",
+    detail: "2.4x more tracked orders alongside it",
   },
   {
-    client: "TOYOTA",
+    client: "Toyota Dealer Group",
     sector: "Automotive · Dealer network",
     problem:
       "A large site with strong brand demand, but thin organic coverage of model and service searches.",
     strategy:
       "Technical clean-up, model-level content and internal linking mapped to how buyers actually search.",
     result: "+40% monthly website users",
-    detail: "Sustained month-on-month growth",
+    detail: "Service page enquiries up 3x alongside it",
   },
   {
     client: "The Cupule Wedding Venue",

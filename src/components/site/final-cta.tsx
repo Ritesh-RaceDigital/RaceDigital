@@ -1,4 +1,5 @@
 import { ChevronRight } from "lucide-react";
+import { Link } from "@tanstack/react-router";
 
 import { Reveal } from "./reveal";
 
@@ -22,15 +23,15 @@ export function FinalCta() {
               need us at all. Fifteen slots a month — that's genuinely all we can do properly.
             </p>
             <div className="mt-11 flex flex-wrap items-center gap-4">
-              <a href="#talk" className="pill group bg-card">
-                Book a free consultation
+              <Link to="/contact" className="pill group bg-card">
+                Get a free audit
                 <span className="pill-chip group-hover:translate-x-0.5">
                   <ChevronRight className="size-4" strokeWidth={2.4} />
                 </span>
-              </a>
-              <a href="#work" className="link-draw px-2 py-3 text-sm font-medium text-muted-foreground">
+              </Link>
+              <Link to="/case-studies" className="link-draw px-2 py-3 text-sm font-medium text-muted-foreground">
                 View portfolio
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -49,7 +50,7 @@ export function FinalCta() {
                 <span className="size-2 rounded-full bg-g-blue" />
               </div>
               <p className="mt-5 text-[10px] font-semibold uppercase tracking-[0.2em] text-muted-foreground">
-                Audit report
+                Sample report
               </p>
               <p className="mt-1 font-display text-2xl font-medium sm:text-3xl">12 findings</p>
               <div className="mt-5 space-y-2.5">
@@ -109,16 +110,6 @@ export function FinalCta() {
                 Missed keywords
               </p>
               <p className="mt-1 font-display text-2xl font-medium text-g-blue">34</p>
-              <div className="mt-2 flex -space-x-1.5">
-                {["A", "B", "C"].map((letter) => (
-                  <span
-                    key={letter}
-                    className="inline-flex h-5 w-5 items-center justify-center rounded-full border border-g-blue/20 bg-g-blue-soft text-[9px] font-semibold text-g-blue"
-                  >
-                    {letter}
-                  </span>
-                ))}
-              </div>
             </div>
 
             {/* Small decorative dots */}

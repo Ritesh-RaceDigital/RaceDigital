@@ -26,7 +26,12 @@ function IndustryRow({ items, reverse = false }: { items: Industry[]; reverse?: 
     <div className="marquee-row relative overflow-hidden [mask-image:linear-gradient(90deg,transparent,#000_6%,#000_94%,transparent)]">
       <div className={`${reverse ? "marquee-track-reverse" : "marquee-track"} gap-4 sm:gap-6`}>
         {[0, 1].map((dup) => (
-          <div key={dup} className="flex shrink-0 items-baseline gap-4 pr-4 sm:gap-6 sm:pr-6">
+          <div
+            key={dup}
+            aria-hidden={dup === 1}
+            inert={dup === 1 ? true : undefined}
+            className="flex shrink-0 items-baseline gap-4 pr-4 sm:gap-6 sm:pr-6"
+          >
             {items.map((it) => (
               <Link
                 key={it.name + dup}
@@ -75,7 +80,7 @@ export function Industries() {
           <div className="marquee-row relative overflow-hidden [mask-image:linear-gradient(90deg,transparent,#000_6%,#000_94%,transparent)]">
             <div className="marquee-track gap-3">
               {[0, 1].map((dup) => (
-                <div key={dup} className="flex shrink-0 items-center gap-3 pr-3">
+                <div key={dup} aria-hidden={dup === 1} className="flex shrink-0 items-center gap-3 pr-3">
                   {tools.map((t) => (
                     <span
                       key={t + dup}
