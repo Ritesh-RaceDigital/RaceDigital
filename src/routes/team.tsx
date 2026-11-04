@@ -48,7 +48,7 @@ function TeamPage() {
         accent="answers its own emails."
         intro="No account-manager relay race. The people who plan your growth are the ones building the campaigns, writing the pages and reading the numbers on Monday morning."
         bullets={[
-          "Eight specialists, one room in Makarba",
+          "Nine specialists, one room in Makarba",
           "Senior hands on every account",
           "You always know who did the work",
         ]}
@@ -138,7 +138,7 @@ function TeamPage() {
           <div className="flex flex-wrap items-end justify-between gap-4">
             <p className="tag">the crew</p>
             <p className="max-w-sm text-sm leading-relaxed text-muted-foreground">
-              Seven specialists who each own a lane — and sit close enough to argue about it.
+              Eight specialists who each own a lane — and sit close enough to argue about it.
             </p>
           </div>
 

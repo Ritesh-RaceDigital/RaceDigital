@@ -6,6 +6,7 @@ import momin from "@/assets/team-momin.webp";
 import tanzil from "@/assets/team-tanzil.webp";
 import faeza from "@/assets/team-faeza.webp";
 import chetan from "@/assets/team-chetan.webp";
+import zaki from "@/assets/team-zaki.webp";
 
 export interface TeamMember {
   name: string;
@@ -83,6 +84,14 @@ export const team: TeamMember[] = [
     note: "Builds and maintains the sites — from a WordPress rebuild to the small fixes that keep a site running fast.",
     initials: "CK",
     photo: chetan,
+  },
+  {
+    name: "Zaki Pathan",
+    role: "Business Development Executive",
+    focus: "Business development, client relations",
+    note: "Usually the first person you'll talk to — he works out what you need and brings in the right people from the team.",
+    initials: "ZP",
+    photo: zaki,
   },
 ];
 
