@@ -157,7 +157,7 @@ export function Hero() {
           Empowering digital success · Ahmedabad
         </p>
 
-        <h1 className="display-xl mt-6 max-w-[20ch] -ml-[0.06em]">
+        <h1 className="display-xl mt-6 max-w-[20ch] -ml-[0.06em] lg:max-w-[calc(100vw-30rem)] lg:text-[clamp(2.75rem,5.6vw,5rem)] xl:max-w-[calc(100vw-44rem)] xl:text-[clamp(3.5rem,4.6vw,5.25rem)]">
           <Letters text="Digital marketing solutions &" />{" "}
           <span className="text-muted-foreground">
             <Letters text="tactics that drive growth in Ahmedabad" />
