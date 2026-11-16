@@ -1,11 +1,20 @@
 import { pageHead, breadcrumbLd, ORG, SITE_URL } from "@/lib/seo";
 import { createFileRoute, notFound, Link } from "@tanstack/react-router";
-import { ChevronRight } from "lucide-react";
+import {
+  BarChart3,
+  ChevronRight,
+  LayoutTemplate,
+  Megaphone,
+  MousePointerClick,
+  PenTool,
+  Search,
+  type LucideIcon,
+} from "lucide-react";
 
 import { PageShell } from "@/components/site/page-shell";
 import { Reveal } from "@/components/site/reveal";
 import { FinalCta } from "@/components/site/final-cta";
-import { posts, formatPostDate, getReadTime } from "@/lib/blog-content";
+import { posts, formatPostDate, getReadTime, type BlogPost } from "@/lib/blog-content";
 
 export const Route = createFileRoute("/blog/$slug")({
   loader: ({ params }) => {
@@ -54,6 +63,48 @@ export const Route = createFileRoute("/blog/$slug")({
   component: BlogPostRoute,
 });
 
+const categoryIcons: Record<string, LucideIcon> = {
+  SEO: Search,
+  PPC: MousePointerClick,
+  "Paid Social": Megaphone,
+  Content: PenTool,
+  Analytics: BarChart3,
+  "Web Design": LayoutTemplate,
+};
+
+function FeaturedImage({ post }: { post: BlogPost }) {
+  if (post.image) {
+    return (
+      <img
+        src={post.image}
+        alt={post.title}
+        className="aspect-[21/9] w-full rounded-3xl object-cover"
+        fetchPriority="high"
+      />
+    );
+  }
+  const Icon = categoryIcons[post.category] ?? Search;
+  return (
+    <div
+      role="img"
+      aria-label={`${post.category} — ${post.title}`}
+      className="relative flex aspect-[21/9] w-full items-center justify-center overflow-hidden rounded-3xl border border-border bg-gradient-to-br from-g-yellow-soft via-background to-g-blue-soft"
+    >
+      <span className="pointer-events-none absolute -left-16 -top-20 size-72 rounded-full bg-g-blue/10 blur-3xl" />
+      <span className="pointer-events-none absolute -bottom-24 -right-10 size-80 rounded-full bg-g-blue/15 blur-3xl" />
+      <span className="pointer-events-none absolute inset-6 rounded-[1.25rem] border border-g-blue/10 sm:inset-10" />
+      <div className="relative flex flex-col items-center gap-4">
+        <span className="flex size-20 items-center justify-center rounded-3xl border border-white bg-background/80 text-g-blue shadow-[0_24px_60px_-24px_rgba(242,101,34,0.7)] backdrop-blur-md sm:size-28">
+          <Icon className="size-9 sm:size-12" strokeWidth={1.75} />
+        </span>
+        <span className="font-display text-xs font-semibold uppercase tracking-[0.28em] text-g-blue">
+          {post.category}
+        </span>
+      </div>
+    </div>
+  );
+}
+
 function BlogPostRoute() {
   const { post } = Route.useLoaderData();
   const more = posts.filter((p) => p.slug !== post.slug).slice(0, 3);
@@ -81,7 +132,11 @@ function BlogPostRoute() {
           </div>
         </header>
 
-        <div className="mx-auto max-w-[860px] px-5 py-16 md:px-8 md:py-24">
+        <div className="mx-auto max-w-[1100px] px-5 pt-10 md:px-8 md:pt-14">
+          <FeaturedImage post={post} />
+        </div>
+
+        <div className="mx-auto max-w-[860px] px-5 py-12 md:px-8 md:py-16">
           {post.body.map((section, i) => (
             <Reveal key={section.heading} delay={(i % 3) * 60}>
               <section className="mb-12 last:mb-0">

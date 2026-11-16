@@ -7,6 +7,8 @@ export interface BlogPost {
   author: string;
   metaTitle: string;
   metaDescription: string;
+  /** Optional featured image URL. When omitted, a branded cover is shown. */
+  image?: string;
   body: { heading: string; paragraphs: string[] }[];
 }
 
