@@ -78,7 +78,7 @@ function FeaturedImage({ post }: { post: BlogPost }) {
       <img
         src={post.image}
         alt={post.title}
-        className="aspect-[21/9] w-full rounded-3xl object-cover"
+        className="aspect-[16/9] w-full rounded-3xl object-cover object-[center_55%]"
         fetchPriority="high"
       />
     );
@@ -118,7 +118,10 @@ function BlogPostRoute() {
             <Link to="/blog" className="tag inline-block hover:text-foreground">
               ← all notes
             </Link>
-            <p className="mt-8 text-xs uppercase tracking-[0.18em] text-g-blue">{post.category}</p>
+            <div className="mt-8">
+              <FeaturedImage post={post} />
+            </div>
+            <p className="mt-10 text-xs uppercase tracking-[0.18em] text-g-blue">{post.category}</p>
             <h1 className="display-lg mt-4">{post.title}</h1>
             <p className="mt-7 text-[1.05rem] leading-relaxed text-muted-foreground">
               {post.excerpt}
@@ -132,11 +135,7 @@ function BlogPostRoute() {
           </div>
         </header>
 
-        <div className="mx-auto max-w-[1100px] px-5 pt-10 md:px-8 md:pt-14">
-          <FeaturedImage post={post} />
-        </div>
-
-        <div className="mx-auto max-w-[860px] px-5 py-12 md:px-8 md:py-16">
+        <div className="mx-auto max-w-[860px] px-5 py-16 md:px-8 md:py-24">
           {post.body.map((section, i) => (
             <Reveal key={section.heading} delay={(i % 3) * 60}>
               <section className="mb-12 last:mb-0">

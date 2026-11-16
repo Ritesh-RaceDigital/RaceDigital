@@ -1,3 +1,10 @@
+import seoImg from "@/assets/blog/seo.jpg";
+import ppcImg from "@/assets/blog/ppc.jpg";
+import landingImg from "@/assets/blog/landing.jpg";
+import contentImg from "@/assets/blog/content.jpg";
+import analyticsImg from "@/assets/blog/analytics.jpg";
+import socialImg from "@/assets/blog/social.jpg";
+
 export interface BlogPost {
   slug: string;
   title: string;
@@ -15,6 +22,7 @@ export interface BlogPost {
 export const posts: BlogPost[] = [
   {
     slug: "seo-checklist-for-ahmedabad-businesses",
+    image: seoImg,
     title: "The local SEO checklist we run before touching anything else",
     excerpt:
       "Before we chase keywords, we fix the boring things: business listings, service pages and the internal links nobody audits. Here's the exact order we work in.",
@@ -50,6 +58,7 @@ export const posts: BlogPost[] = [
   },
   {
     slug: "cut-wasted-google-ads-spend",
+    image: ppcImg,
     title: "Where your Google Ads budget quietly leaks every month",
     excerpt:
       "Four audits later, the same five leaks show up: broad match without guardrails, no negatives, unsegmented brand, ignored search terms and untracked calls.",
@@ -82,6 +91,7 @@ export const posts: BlogPost[] = [
   },
   {
     slug: "landing-pages-that-convert",
+    image: landingImg,
     title: "A landing page is a conversation, not a brochure",
     excerpt:
       "Most pages answer questions nobody asked and skip the three that matter. Here's the structure we use when a campaign has to earn its budget back.",
@@ -114,6 +124,7 @@ export const posts: BlogPost[] = [
   },
   {
     slug: "content-that-earns-links",
+    image: contentImg,
     title: "Why most 'link building' fails before the first email",
     excerpt:
       "Outreach doesn't fix weak assets. If the page you're pitching has nothing worth citing, the reply rate tells you exactly that.",
@@ -140,6 +151,7 @@ export const posts: BlogPost[] = [
   },
   {
     slug: "ga4-reporting-that-leadership-reads",
+    image: analyticsImg,
     title: "Build the one report your leadership actually opens",
     excerpt:
       "Nobody reads a 40-tab dashboard. We ship a single page: what we spent, what came back, what changed, and what happens next month.",
@@ -166,6 +178,7 @@ export const posts: BlogPost[] = [
   },
   {
     slug: "meta-ads-creative-testing",
+    image: socialImg,
     title: "How we test Meta creative without burning the budget",
     excerpt:
       "Three hooks, one offer, a hard stop at the learning threshold. A simple loop beats a clever one you can't repeat every week.",
