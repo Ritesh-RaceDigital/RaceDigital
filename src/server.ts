@@ -44,9 +44,15 @@ function isH3SwallowedErrorBody(body: string): boolean {
   }
 }
 
+// Lovable's MCP/debug endpoints are not used by the public site; hide them in production.
+const BLOCKED_PATH = /^\/(mcp|\.mcp|\.well-known\/oauth-protected-resource)(\/|$)/;
+
 export default {
   async fetch(request: Request, env: unknown, ctx: unknown) {
     try {
+      if (import.meta.env.PROD && BLOCKED_PATH.test(new URL(request.url).pathname)) {
+        return new Response("Not found", { status: 404, headers: { "content-type": "text/plain" } });
+      }
       const handler = await getServerEntry();
       const response = await handler.fetch(request, env, ctx);
       return await normalizeCatastrophicSsrResponse(response);

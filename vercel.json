@@ -1,10 +1,5 @@
 {
   "trailingSlash": false,
-  "rewrites": [
-    { "source": "/mcp", "destination": "/__blocked" },
-    { "source": "/.mcp/:path*", "destination": "/__blocked" },
-    { "source": "/.well-known/oauth-protected-resource", "destination": "/__blocked" }
-  ],
   "headers": [
     {
       "source": "/(.*)",
