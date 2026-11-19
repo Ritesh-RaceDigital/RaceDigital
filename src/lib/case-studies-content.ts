@@ -1,4 +1,4 @@
-import naanKabobImg from "@/assets/cases/naan-kabob.jpg";
+import naanKabobImg from "@/assets/cases/naan-kabob.png";
 import toyotaImg from "@/assets/cases/toyota-dealership.jpg";
 import cupuleImg from "@/assets/cases/the-cupule-wedding-venue.jpg";
 import homeDecorImg from "@/assets/cases/d2c-home-decor.jpg";
@@ -9,6 +9,8 @@ export type CaseStudy = {
   slug: string;
   /** Illustrative stock image for the industry. */
   image: string;
+  /** Show the whole image (e.g. a logo on a solid background) instead of cropping it. */
+  imageContain?: boolean;
   client: string;
   anonymized?: boolean;
   industry: string;
@@ -31,6 +33,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "naan-kabob",
     image: naanKabobImg,
+    imageContain: true,
     client: "NAAN KABOB",
     industry: "Restaurant",
     location: "Greater Toronto Area, Canada",

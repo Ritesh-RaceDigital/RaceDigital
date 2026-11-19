@@ -58,7 +58,7 @@ function CaseStudiesIndex() {
                 src={c.image}
                 alt={`${c.client} — ${c.industry}`}
                 loading={i < 2 ? "eager" : "lazy"}
-                className="aspect-[4/3] w-full rounded-2xl object-cover"
+                className={`aspect-[4/3] w-full rounded-2xl ${c.imageContain ? "bg-black object-contain" : "object-cover"}`}
               />
               <div>
                 <span className="font-display text-sm font-bold tracking-widest text-muted-foreground">
