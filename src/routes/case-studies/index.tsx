@@ -52,8 +52,14 @@ function CaseStudiesIndex() {
             <Link
               to="/case-studies/$slug"
               params={{ slug: c.slug }}
-              className="group grid gap-5 border-t border-border py-10 last:border-b md:grid-cols-[minmax(0,1fr)_minmax(0,1.15fr)_auto] md:items-start md:gap-10"
+              className="group grid gap-5 border-t border-border py-10 last:border-b md:grid-cols-[16rem_minmax(0,1fr)_minmax(0,1.15fr)_auto] md:items-start md:gap-10"
             >
+              <img
+                src={c.image}
+                alt={`${c.client} — ${c.industry}`}
+                loading={i < 2 ? "eager" : "lazy"}
+                className="aspect-[4/3] w-full rounded-2xl object-cover"
+              />
               <div>
                 <span className="font-display text-sm font-bold tracking-widest text-muted-foreground">
                   {String(i + 1).padStart(2, "0")} / {c.industry}

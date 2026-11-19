@@ -1,5 +1,14 @@
+import naanKabobImg from "@/assets/cases/naan-kabob.jpg";
+import toyotaImg from "@/assets/cases/toyota-dealership.jpg";
+import cupuleImg from "@/assets/cases/the-cupule-wedding-venue.jpg";
+import homeDecorImg from "@/assets/cases/d2c-home-decor.jpg";
+import manufacturingImg from "@/assets/cases/b2b-manufacturing.jpg";
+import healthcareImg from "@/assets/cases/healthcare-clinic-network.jpg";
+
 export type CaseStudy = {
   slug: string;
+  /** Illustrative stock image for the industry. */
+  image: string;
   client: string;
   anonymized?: boolean;
   industry: string;
@@ -21,6 +30,7 @@ export type CaseStudy = {
 export const caseStudies: CaseStudy[] = [
   {
     slug: "naan-kabob",
+    image: naanKabobImg,
     client: "NAAN KABOB",
     industry: "Restaurant chain",
     location: "Multi-location",
@@ -71,6 +81,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "toyota-dealership",
+    image: toyotaImg,
     client: "Toyota Dealer Group",
     industry: "Automotive",
     location: "Gujarat",
@@ -121,6 +132,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "the-cupule-wedding-venue",
+    image: cupuleImg,
     client: "The Cupule Wedding Venue",
     industry: "Hospitality & events",
     location: "Ahmedabad",
@@ -171,6 +183,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "d2c-home-decor",
+    image: homeDecorImg,
     client: "D2C home décor brand",
     anonymized: true,
     industry: "Ecommerce",
@@ -222,6 +235,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "b2b-manufacturing",
+    image: manufacturingImg,
     client: "Industrial components manufacturer",
     anonymized: true,
     industry: "B2B manufacturing",
@@ -273,6 +287,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "healthcare-clinic-network",
+    image: healthcareImg,
     client: "Multi-speciality clinic network",
     anonymized: true,
     industry: "Healthcare",

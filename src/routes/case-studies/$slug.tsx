@@ -70,6 +70,16 @@ function CaseStudyRoute() {
         aside="Numbers pulled from the client's own analytics, not ours."
       />
 
+      {/* Featured image */}
+      <div className="mx-auto max-w-[1440px] px-5 pb-4 md:px-8">
+        <img
+          src={study.image}
+          alt={`${study.client} — ${study.industry}`}
+          fetchPriority="high"
+          className="aspect-[16/8] w-full rounded-3xl object-cover"
+        />
+      </div>
+
       {/* Result ledger */}
       <section className="border-b border-border bg-paper-deep">
         <div className="mx-auto grid max-w-[1440px] gap-x-10 gap-y-8 px-5 py-14 sm:grid-cols-3 md:px-8">
