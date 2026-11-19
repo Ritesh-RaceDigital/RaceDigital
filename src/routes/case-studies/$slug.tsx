@@ -165,16 +165,18 @@ function CaseStudyRoute() {
           </Reveal>
 
           <Reveal delay={80}>
-            <figure className="border-t-2 border-g-blue bg-card px-8 py-10">
-              <blockquote className="font-display text-xl font-extrabold leading-snug tracking-tight sm:text-2xl">
-                “{study.quote.text}”
-              </blockquote>
-              <figcaption className="mt-6 text-sm text-muted-foreground">
-                {study.quote.who}
-              </figcaption>
-            </figure>
+            {study.quote && (
+              <figure className="border-t-2 border-g-blue bg-card px-8 py-10">
+                <blockquote className="font-display text-xl font-extrabold leading-snug tracking-tight sm:text-2xl">
+                  “{study.quote.text}”
+                </blockquote>
+                <figcaption className="mt-6 text-sm text-muted-foreground">
+                  {study.quote.who}
+                </figcaption>
+              </figure>
+            )}
 
-            <div className="mt-10">
+            <div className={study.quote ? "mt-10" : undefined}>
               <p className="tag">Services used</p>
               <ul className="mt-4 space-y-2">
                 {related.map((s) => (

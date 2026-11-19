@@ -6,14 +6,14 @@ import { Reveal } from "./reveal";
 const cases = [
   {
     client: "NAAN KABOB",
-    sector: "Restaurant · Multi-outlet",
+    sector: "Restaurant · Greater Toronto Area",
     problem:
-      "Paid search was buying broad food-delivery terms, so cost per click kept climbing while orders stayed flat.",
+      "A new restaurant with one branch and no online presence, up against established Middle Eastern eateries that already owned every local search.",
     strategy:
-      "Rebuilt the campaign around high-intent local queries, tightened match types and rewrote ad copy per outlet.",
-    result: "−60%",
-    resultLabel: "cost per click",
-    sub: "2.4x more tracked orders alongside it",
+      "Keyword research, local SEO and Google Maps optimisation, search-led content and local backlinks.",
+    result: "0 → 30K",
+    resultLabel: "monthly organic visitors",
+    sub: "Google Maps listing became a key driver of footfall",
     accent: "text-g-blue",
   },
   {

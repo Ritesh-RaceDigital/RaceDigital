@@ -5,7 +5,7 @@ export interface Industry {
 }
 
 export const industries: Industry[] = [
-  { name: "Restaurants", note: "Multi-outlet F&B", caseStudySlug: "naan-kabob" },
+  { name: "Restaurants", note: "Local restaurants", caseStudySlug: "naan-kabob" },
   { name: "Automotive", note: "Dealers & service", caseStudySlug: "toyota-dealership" },
   { name: "Hospitality", note: "Venues & events", caseStudySlug: "the-cupule-wedding-venue" },
   { name: "E-commerce", note: "D2C & marketplace", caseStudySlug: "d2c-home-decor" },

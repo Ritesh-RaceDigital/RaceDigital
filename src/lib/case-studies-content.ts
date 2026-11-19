@@ -21,7 +21,7 @@ export type CaseStudy = {
   approach: { title: string; note: string }[];
   results: { value: string; label: string }[];
   outcome: string[];
-  quote: { text: string; who: string };
+  quote?: { text: string; who: string };
   serviceSlugs: string[];
   metaTitle: string;
   metaDescription: string;
@@ -32,52 +32,51 @@ export const caseStudies: CaseStudy[] = [
     slug: "naan-kabob",
     image: naanKabobImg,
     client: "NAAN KABOB",
-    industry: "Restaurant chain",
-    location: "Multi-location",
-    duration: "7 months",
-    headline: "How NAAN KABOB cut cost per click by",
-    accent: "60%.",
+    industry: "Restaurant",
+    location: "Greater Toronto Area, Canada",
+    duration: "First year",
+    headline: "How NAAN KABOB grew organic traffic from zero to",
+    accent: "30,000 a month.",
     summary:
-      "A growing kebab chain was paying premium prices for clicks that rarely walked through the door. We rebuilt the account around intent and location, and the cost of a customer fell with it.",
+      "A new Middle Eastern restaurant with one branch and no digital footprint, in one of the most competitive dining markets in Canada. Local SEO, search-led content and link building turned Google into its busiest front door.",
     challenge: [
-      "The account had been running on broad match with a single national campaign. Every branch competed for the same budget, and the busiest outlet quietly ate the spend meant for the newest one.",
-      "Ad copy talked about the brand. Search queries were about lunch near me, catering for 40 people, and halal delivery. The gap between the two was costing roughly six rupees in every ten.",
+      "NAAN KABOB came to us as a new restaurant with a single location and no online presence to build on. There was no brand awareness, no search history and no SEO foundation, so every ranking had to be earned from scratch.",
+      "The Toronto restaurant scene is crowded, and well-established Middle Eastern eateries already owned the searches and the customer loyalty. The goals were clear: be found on Google, win the Google Maps listing, and turn that visibility into people walking through the door.",
     ],
     approach: [
       {
-        title: "Split the account by branch",
-        note: "One campaign per outlet, with radius targeting drawn around real delivery zones instead of a city-wide guess.",
+        title: "Keyword research built around intent",
+        note: "A mix of broad and long-tail searches for Middle Eastern food in Toronto, from \"best Middle Eastern food Toronto\" to the restaurant's own name.",
       },
       {
-        title: "Rebuilt the keyword set around intent",
-        note: "Cut 300+ broad terms, kept the ones tied to ordering, catering and reservations, and added negatives for recipe and job searches.",
+        title: "On-page SEO and content",
+        note: "Optimised titles, descriptions and headings, plus blog posts, landing pages and menu pages that answer what diners actually search for.",
       },
       {
-        title: "Wrote ads that answer the query",
-        note: "Menu-specific headlines, live offers, and call and directions extensions on every mobile impression.",
+        title: "Google Maps and local SEO",
+        note: "A complete, regularly updated Google Business Profile with photos, posts and offers, and a consistent name, address and phone number across every directory.",
       },
       {
-        title: "Fixed measurement first",
-        note: "Calls, direction requests and online orders were all tracked as separate conversions, so bidding optimised for revenue rather than traffic.",
+        title: "Local backlinks",
+        note: "Links from local food bloggers, directories and community websites to strengthen the restaurant's local authority.",
+      },
+      {
+        title: "Fast mobile site and reviews",
+        note: "A mobile-responsive, fast-loading website, and a steady flow of Google reviews with replies to every one of them.",
       },
     ],
     results: [
-      { value: "60%", label: "Lower cost per click" },
-      { value: "2.4x", label: "More tracked orders" },
-      { value: "38%", label: "Cut in wasted spend" },
+      { value: "0 → 30K", label: "Monthly organic visitors" },
+      { value: "4,600+", label: "Keywords ranking in Google" },
     ],
     outcome: [
-      "Within two months the blended cost per click had halved, and by month four the chain was spending less per outlet while taking more orders.",
-      "The account now runs on a fixed monthly budget with a clear cost-per-order target — and the newest branch gets its fair share.",
+      "Organic traffic climbed from zero to roughly 30,000 visitors a month, and the growth in visibility showed up as more diners walking in after finding the restaurant through search.",
+      "The Google Maps listing became a key driver of footfall, ranking prominently for relevant local searches, while content and local outreach established NAAN KABOB as a go-to name for Middle Eastern food in the Greater Toronto Area.",
     ],
-    quote: {
-      text: "We were spending more every month and seeing less. The first thing Race Digital did was tell us what to switch off.",
-      who: "Marketing lead, NAAN KABOB",
-    },
-    serviceSlugs: ["ppc", "paid-social-ads"],
-    metaTitle: "NAAN KABOB Case Study — 60% Cheaper CPC | Race Digital",
+    serviceSlugs: ["seo", "content-marketing", "link-building", "web-design"],
+    metaTitle: "NAAN KABOB Case Study — 0 to 30,000 Organic Visitors | Race Digital",
     metaDescription:
-      "How Race Digital restructured NAAN KABOB's Google Ads account by branch and intent, cutting cost per click by 60% and lifting tracked orders 2.4x.",
+      "How Race Digital took a new Toronto restaurant from zero to roughly 30,000 monthly organic visitors with local SEO, Google Maps optimisation, content and link building.",
   },
   {
     slug: "toyota-dealership",

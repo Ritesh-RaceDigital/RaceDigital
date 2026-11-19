@@ -10,7 +10,7 @@ import { pageHead, breadcrumbLd } from "@/lib/seo";
 
 const title = "Case Studies — Digital Marketing Results | Race Digital";
 const description =
-  "Real campaigns, real numbers: 60% cheaper clicks, 190% more organic traffic, 4.1x ROAS. See how Race Digital grows businesses in Ahmedabad and beyond.";
+  "Real campaigns, real numbers: 0 to 30,000 monthly organic visitors, 190% more organic traffic, 4.1x ROAS. See how Race Digital grows businesses in Ahmedabad and beyond.";
 
 export const Route = createFileRoute("/case-studies/")({
   head: () => ({
