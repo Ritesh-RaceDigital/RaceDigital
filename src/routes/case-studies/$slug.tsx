@@ -76,6 +76,8 @@ function CaseStudyRoute() {
           src={study.image}
           alt={`${study.client} — ${study.industry}`}
           fetchPriority="high"
+          width={1600}
+          height={800}
           className={`aspect-[16/8] w-full rounded-3xl ${study.imageContain ? "bg-black object-contain" : "object-cover"}`}
         />
       </div>

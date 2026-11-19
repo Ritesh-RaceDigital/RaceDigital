@@ -208,6 +208,8 @@ export function Hero() {
                     src={f.src}
                     alt={f.alt}
                     loading="lazy"
+                    width={36}
+                    height={36}
                     className="size-9 rounded-full border-2 border-background object-cover"
                   />
                 ))}

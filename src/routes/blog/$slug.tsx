@@ -80,6 +80,8 @@ function FeaturedImage({ post }: { post: BlogPost }) {
         alt={post.title}
         className="aspect-[16/9] w-full rounded-3xl object-cover object-[center_55%]"
         fetchPriority="high"
+        width={1600}
+        height={900}
       />
     );
   }

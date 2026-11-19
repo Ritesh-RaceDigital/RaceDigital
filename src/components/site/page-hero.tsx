@@ -76,6 +76,8 @@ export function PageHero({
               src={image}
               alt={imageAlt ?? ""}
               aria-hidden={!imageAlt}
+              width={1200}
+              height={528}
               className="h-[16rem] w-full rounded-[2rem] object-cover md:h-[22rem]"
             />
           </Reveal>

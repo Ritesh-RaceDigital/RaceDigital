@@ -58,6 +58,8 @@ function CaseStudiesIndex() {
                 src={c.image}
                 alt={`${c.client} — ${c.industry}`}
                 loading={i < 2 ? "eager" : "lazy"}
+                width={800}
+                height={600}
                 className={`aspect-[4/3] w-full rounded-2xl ${c.imageContain ? "bg-black object-contain" : "object-cover"}`}
               />
               <div>

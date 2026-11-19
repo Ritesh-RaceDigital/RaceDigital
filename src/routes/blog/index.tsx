@@ -57,6 +57,8 @@ function BlogIndex() {
                   src={lead.image}
                   alt={lead.title}
                   fetchPriority="high"
+                  width={1600}
+                  height={900}
                   className="aspect-[16/9] w-full rounded-2xl object-cover object-[center_55%] md:col-span-2"
                 />
               )}
@@ -96,6 +98,8 @@ function BlogIndex() {
                     src={p.image}
                     alt={p.title}
                     loading="lazy"
+                    width={800}
+                    height={600}
                     className="aspect-[4/3] w-full rounded-2xl object-cover object-[center_55%]"
                   />
                 ) : (
