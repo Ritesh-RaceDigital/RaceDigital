@@ -137,8 +137,8 @@ function BlogPostRoute() {
 
         <div className="mx-auto max-w-[860px] px-5 py-16 md:px-8 md:py-24">
           {post.body.map((section, i) => (
-            <Reveal key={section.heading} delay={(i % 3) * 60}>
-              <section className="mb-12 last:mb-0">
+            <Reveal key={section.heading} delay={(i % 3) * 60} className="mb-12 last:mb-0">
+              <section>
                 <h2 className="font-display text-[1.6rem] font-extrabold leading-tight tracking-tight sm:text-[2rem]">
                   {section.heading}
                 </h2>
