@@ -1,4 +1,7 @@
 import naanKabobImg from "@/assets/cases/naan-kabob.png";
+import roofingImg from "@/assets/cases/roofing-contractors.jpg";
+import londonDoorImg from "@/assets/cases/london-door-company.jpg";
+import airRiderzImg from "@/assets/cases/air-riderz.jpg";
 import toyotaImg from "@/assets/cases/toyota-dealership.jpg";
 import cupuleImg from "@/assets/cases/the-cupule-wedding-venue.jpg";
 import homeDecorImg from "@/assets/cases/d2c-home-decor.jpg";
@@ -80,6 +83,154 @@ export const caseStudies: CaseStudy[] = [
     metaTitle: "NAAN KABOB Case Study — 0 to 30,000 Organic Visitors | Race Digital",
     metaDescription:
       "How Race Digital took a new Toronto restaurant from zero to roughly 30,000 monthly organic visitors with local SEO, Google Maps optimisation, content and link building.",
+  },
+  {
+    slug: "roofing-contractors",
+    image: roofingImg,
+    client: "Rain Safe Roofing & The Roof Medic",
+    industry: "Roofing contractors",
+    location: "Mississauga & Milton, Ontario",
+    duration: "Ongoing",
+    headline: "How two roofing contractors reached",
+    accent: "#1 in the Google Map Pack.",
+    summary:
+      "Roofing is one of the most competitive local markets in North America. A Google Business Profile rebuild, a review engine and steady local content put two Ontario contractors at the top of the Map Pack in their cities.",
+    challenge: [
+      "Rain Safe Roofing in Mississauga was one of 100+ roofing companies competing for the same searches, with no keyword optimisation for \"roofing contractor in Mississauga\", low-quality photos, infrequent updates and weak call and review signals.",
+      "The Roof Medic in Milton faced results dominated by older, established roofers. The profile had poor visual quality and little keyword presence in its reviews, so it simply did not appear for \"roofing contractor in Milton\".",
+    ],
+    approach: [
+      {
+        title: "Google Business Profile rebuild",
+        note: "Optimised primary and secondary categories, a full roofing service list (shingle repair, roof replacement, emergency repair, skylights and more), keyword-rich descriptions, service areas and booking buttons.",
+      },
+      {
+        title: "Local SEO clean-up",
+        note: "Consistent name, address and phone data across 40+ directories, geo-tagged job-site photos and location-based service pages.",
+      },
+      {
+        title: "A keyword-aware review engine",
+        note: "Automated review requests with prompts like \"roof replacement Mississauga\", plus a reply to every review that reinforces the service and the area.",
+      },
+      {
+        title: "Local content and engagement",
+        note: "Weekly Google Posts, job progress photos, optimised Q&A and Milton-specific posts and FAQs built around searches like \"Milton roof repair\".",
+      },
+      {
+        title: "Ongoing tracking",
+        note: "Call tracking, UTM tagging and weekly adjustments based on ranking changes and competitor moves.",
+      },
+    ],
+    results: [
+      { value: "#1", label: "Map Pack rank in Mississauga" },
+      { value: "#1", label: "Map Pack rank in Milton" },
+      { value: "5.0★", label: "Google rating, 250+ reviews combined" },
+    ],
+    outcome: [
+      "Rain Safe Roofing reached the top of the Map Pack for \"roofing contractor in Mississauga\", ahead of long-established companies, with a 5.0 rating from 100+ reviews and more calls and direction requests from neighbourhoods such as Erin Mills, Churchill Meadows and Port Credit.",
+      "The Roof Medic took the top spot for \"roofing contractor in Milton\" with a 5.0 rating from 150+ reviews, bringing steady enquiries for roof replacements, emergency patching, winter leak repairs and insurance work, without relying on paid ads.",
+    ],
+    serviceSlugs: ["seo", "content-marketing", "link-building"],
+    metaTitle: "Roofing Local SEO Case Study — #1 in the Map Pack | Race Digital",
+    metaDescription:
+      "How Race Digital ranked two Ontario roofing contractors #1 in the Google Map Pack in Mississauga and Milton with Google Business Profile optimisation, reviews and local content.",
+  },
+  {
+    slug: "london-door-company",
+    image: londonDoorImg,
+    client: "The London Door Company",
+    industry: "Home improvement",
+    location: "London, UK",
+    duration: "3 months",
+    headline: "How we reversed a traffic decline and grew organic traffic by",
+    accent: "70% in 3 months.",
+    summary:
+      "A luxury door maker whose organic visits had been sliding for months. Technical fixes, refreshed content and a tighter keyword strategy turned the trend around and brought more enquiries with it.",
+    challenge: [
+      "The London Door Company, a provider of bespoke and luxury doors for London homes, came to us in July 2024 with a website that had been losing traffic steadily and was down to around 10,000 monthly visitors.",
+      "The market is competitive, the content was outdated and not optimised for keywords, and technical problems such as slow pages, broken links and missing meta tags were compounding the effect of recent Google algorithm changes.",
+    ],
+    approach: [
+      {
+        title: "SEO audit and technical fixes",
+        note: "Found and fixed the issues holding the site back: slow page speed, broken links and missing meta tags.",
+      },
+      {
+        title: "Content optimisation",
+        note: "Updated key landing pages with search-optimised copy and started a blog aimed at high-volume, relevant searches.",
+      },
+      {
+        title: "Keyword strategy",
+        note: "Focused on long-tail, high-intent keywords and tightened on-page SEO around them.",
+      },
+      {
+        title: "Backlinks and local SEO",
+        note: "Earned high-quality links from relevant sources, and optimised the Google Business Profile with location-specific keywords.",
+      },
+      {
+        title: "Ongoing monitoring",
+        note: "Adjusted the plan against performance data as results came in.",
+      },
+    ],
+    results: [
+      { value: "+70%", label: "Organic traffic in 3 months" },
+      { value: "+40%", label: "Online lead enquiries" },
+    ],
+    outcome: [
+      "Within three months organic traffic was up 70% and online lead enquiries were up 40%, restoring the site's visibility in a highly competitive luxury home improvement market.",
+      "The recovery shows how quickly technical fixes combined with content built around conversion can turn organic growth into qualified leads.",
+    ],
+    serviceSlugs: ["seo", "content-marketing", "link-building"],
+    metaTitle: "SEO Recovery Case Study — +70% Organic Traffic | Race Digital",
+    metaDescription:
+      "How Race Digital grew organic traffic by 70% and online enquiries by 40% in three months for a London luxury door company with technical SEO, content and link building.",
+  },
+  {
+    slug: "air-riderz",
+    image: airRiderzImg,
+    client: "Air Riderz",
+    industry: "Entertainment",
+    location: "Ontario, Canada",
+    duration: "7 months",
+    headline: "How a four-location trampoline park grew organic users by 376% and ticket purchases by",
+    accent: "3,029%.",
+    summary:
+      "Four venues sharing one undifferentiated website. A location-by-location site structure, local content and targeted paid search drove traffic and ticket sales up across the board.",
+    challenge: [
+      "Air Riderz is a trampoline park brand with four locations: Mississauga, Vaughan, Aurora and New York. All four lived under a single domain with no separation between them, which made it hard to target location-specific keywords.",
+      "Without location subdirectories the reach of the keyword set was limited, and localised content was diluted on one shared site, so it did little to bring visitors to a specific venue.",
+    ],
+    approach: [
+      {
+        title: "A subdirectory for every location",
+        note: "Separate sections such as /mississauga/ and /vaughan/, each with its own pages optimised for local search terms and tailored to that venue's visitors.",
+      },
+      {
+        title: "Local content and on-page SEO",
+        note: "Location keywords in meta tags, headings and body copy, with unique content on attractions, events and promotions for each venue.",
+      },
+      {
+        title: "Technical SEO",
+        note: "A cleaner site architecture that is easier for visitors and search engines to navigate, plus performance work for faster loading.",
+      },
+      {
+        title: "Localised paid search",
+        note: "Campaigns for each venue with location-specific ads, and continuous A/B testing of ad copy and landing pages.",
+      },
+    ],
+    results: [
+      { value: "+376%", label: "Organic users" },
+      { value: "+3,029%", label: "Ticket purchases (key events)" },
+      { value: "+248%", label: "New users" },
+    ],
+    outcome: [
+      "Over the first seven months of 2024, compared with the same period a year earlier, organic traffic grew 392%, paid traffic 59%, overall traffic 260% and total sessions 265%, with key events up more than 3,000%.",
+      "The case shows how a tailored SEO and paid search strategy, built around each location, can drive footfall for a multi-location business.",
+    ],
+    serviceSlugs: ["seo", "content-marketing", "link-building", "ppc", "web-design"],
+    metaTitle: "Multi-Location SEO Case Study — +376% Organic Users | Race Digital",
+    metaDescription:
+      "How Race Digital grew organic users by 376% and ticket purchases by 3,029% in seven months for a four-location trampoline park with location pages, local SEO and paid search.",
   },
   {
     slug: "toyota-dealership",
